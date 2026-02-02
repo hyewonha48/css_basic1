@@ -1,0 +1,38 @@
+body {}
+#news {
+background-color:#3E7736;
+width:430px; height:932px;
+padding:15px 30px;
+}
+#news > * {padding-bottom:25px;} /* >a, .box, >p */
+#news > a {
+    display:block;
+    font-size:1.25rem;
+    font-weight:600;}
+#news .box {}
+#news .box a {}
+#news .box a * {display:inline}
+#news .box a h2 {
+    padding-bottom:25px;
+    font-size:1.88rem;
+    font-weight:300px;
+    }
+
+#news .box a p {font-size:0.88rem;
+    font-weight:400px;}
+#news > p {}
+#news > span {}
+
+/* 처음연습
+body {}
+#news {
+width:430px; height:932px; 
+padding:15px 30px; 
+background-color:#3E7736;}
+#news a {}
+#news a > * {padding-bottom:25px;}
+#news .box {}
+#news .box h2 {}
+#news .box p {}
+#news p {}
+ */

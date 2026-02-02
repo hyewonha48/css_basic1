@@ -1,0 +1,20 @@
+/* 디자인CSS */
+body {}
+#weather {
+    /* 1:크기조절(width:px; height:px;) */
+    width:393px; height:852px; 
+    /* 2:간격:형제(css는 형제선택자에 작성),패딩설정:부모-자식(padding:px px;) */
+    padding:50px 15px; 
+    /* 3:배경색상(background-color:#;) */
+    background-color: #006FB4;
+}
+/* 부모 #weather 안 모든(*) 자식(>) : *자식은 꺽쇠/자손은 띄어쓰기 */
+#weather > * {padding-bottom:20px;}
+#weather h1 {}
+#weather .area {font-size:1.5rem;}
+#weather .temperature {font-size:2.0rem;}
+#weather p {}
+#weather .sub_title {}
+#weather .humidity {}
+#weather .dust {}
+#weather .result {line-height:1.5;}

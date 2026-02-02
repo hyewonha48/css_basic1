@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>CSS 시작</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- html주석 -->
+    <style>
+        /* css주석 */
+        /* 선택자 {속성:값; 속성:값;} */
+        body {background-color: cadetblue;}
+        /* ★태그작성 순서와 동일하게 선택자작성★ */
+        /* #=id / .=class */
+        /* #wrap {} 아이디 wrap을 가진 대상에 디자인 적용 */
+        #wrap {background-color: #999;}
+        /* 아이디wrap 부모 안 h1 선택 */
+        #wrap h1 {background-color: #f5f5f5;}
+        #wrap h1 a {background-color: #ff0;}
+        #wrap p {background-color: #ffc;}
+        #wrap .list {background-color: #0cf;}
+        #wrap .list li {background-color: #1fc;}
+        #wrap .list li em {background-color: #fff;}
+        #wrap .list li span {background-color: #fff;}
+        #wrap dl {background-color: #0cf;}
+        #wrap dl dt {background-color: #1fc;}
+        #wrap dl dd {background-color: #ffacac; color: rgb(255, 255, 255);}
+        /* 선택자연습 */
+        #wrap {}
+        #wrap h1 {}
+        #wrap h1 a {}
+        #wrap h1+p {color: #0cf;} /* "#wrap h1+p {}" OR "#wrap h1 + p {}" */
+        #wrap P {}
+        #wrap .list {}
+        #wrap .list li {}
+        #wrap .list li em {}
+        #wrap .list li span {}
+        #wrap .list dl {}
+        #wrap .list dl dt {}
+        #wrap .list dl dd {}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1><a href="#">logo</a></h1>
+        <P>contents</P>
+        <P>contents</P>
+        <ul class="list">
+            <li><em>li1-em</em></li>
+            <li>li2</li>
+            <li><span>li3-span</span></li>
+        </ul>
+        <dl>
+            <dt>title1</dt>
+            <dd>contents</dd>
+            <dt>title2</dt>
+            <dd>contents</dd>
+        </dl>
+    </div>
+</body>
+</html>
