@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/table1.css">
+</head>
+<body>
+    <!-- 틀>행>열(내용/제목) -->
+    <table id="t1">
+        <tr>
+            <th>내용1</th>
+            <th>내용2</th>
+        </tr>
+        <tr>
+            <td>내용3</td>
+            <td>내용4</td>
+        </tr>
+    </table>
+    <table id="t2">
+        <!-- 3행 4열(1행제목)-->
+        <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+            <th>제목4</th>
+        </tr>
+        <tr>
+            <td>내용1</td>
+            <td>내용2</td>
+            <td>내용3</td>
+            <td>내용4</td>
+        </tr>
+        <tr>
+            <td>내용5</td>
+            <td>내용6</td>
+            <td>내용7</td>
+            <td>내용8</td>
+        </tr>
+    <table id="t3">
+        <thead>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="kyobo">
+        <h1>도서재고</h1>
+        <table id="book">
+            <thead>
+                <th>제목</th>
+                <th>종류</th>
+                <th>가격</th>
+                <th>수량</th>
+                <th>비고</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>사카모토 데이즈 23권 : 신생 살연 (특장판)</th>
+                    <td>도서</td>
+                    <td>5,000</td>
+                    <td>300</td>
+                    <td>재고없음</td>
+                </tr>
+                <tr>
+                    <th>괴수 8호 [전권] 1권~15권 (더블특전·초판)</th>
+                    <td>도서</td>
+                    <td>129,000</td>
+                    <td>180</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>하이큐 파이널 가이드북 배구극</th>
+                    <td>도서</td>
+                    <td>15,000</td>
+                    <td>60</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>하이큐 [전권] 1권~45권 (특장판)</th>
+                    <td>도서</td>
+                    <td>549,000</td>
+                    <td>130</td>
+                    <td>재고없음</td>
+                </tr>
+                <tr>
+                    <th>하이큐 [전권] 1권~45권</th>
+                    <td>도서</td>
+                    <td>500,000</td>
+                    <td>490</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="wrap">
+            <div class="top">
+                <h1>2024년 지역별 매출현황</h1>
+                <p>(단위:천원)</p>
+            </div>
+            <table id="sales">
+                <thead>
+                    <tr>
+                        <th>지역</th>
+                        <th>1분기</th>
+                        <th>2분기</th>
+                        <th>3분기</th>
+                        <th>4분기</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>서울</th>
+                        <td>1,800</td>
+                        <td>2,300</td>
+                        <td>2,600</td>
+                        <td>4,300</td>
+                    </tr>
+                    <tr>
+                        <th>인천</th>
+                        <td>1,800</td>
+                        <td>2,300</td>
+                        <td>2,600</td>
+                        <td>4,300</td>
+                    </tr>
+                    <tr>
+                        <th>대전</th>
+                        <td>1,800</td>
+                        <td>2,300</td>
+                        <td>2,600</td>
+                        <td>4,300</td>
+                    </tr>
+                    <tr>
+                        <th>부산</th>
+                        <td>1,800</td>
+                        <td>2,300</td>
+                        <td>2,600</td>
+                        <td>4,300</td>
+                    </tr>
+                    <tr>
+                        <th>광주</th>
+                        <td>1,800</td>
+                        <td>2,300</td>
+                        <td>2,600</td>
+                        <td>4,300</td>
+                    </tr>
+                    <tr>
+                        <th>대구</th>
+                        <td>1,800</td>
+                        <td>2,300</td>
+                        <td>2,600</td>
+                        <td>4,300</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="phone">
+            <table id="pay">
+                <thead>
+                    <tr>
+                        <th rowspan="2"><img src="https://cdn-icons-png.flaticon.com/128/3916/3916594.png" alt=""></i></th>
+                        <th colspan="4">
+                            선불요금제(국제전화)<em>합리적인 선불요금제에 국제전화 헤택을 더한 알뜰한 요금제</em>
+                            </th>
+                        <!-- <th>3</th> -->
+                        <!-- <th>4</th> -->
+                        <!-- <th>5</th> -->
+                    </tr>
+                    <tr>
+                        <!-- <th>6</th> -->
+                        <th>기본요금<em>(부가세 포함금액)</em></th>
+                        <th>음성</th>
+                        <th>문자</th>
+                        <th>데이터</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

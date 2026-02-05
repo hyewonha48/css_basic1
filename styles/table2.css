@@ -1,0 +1,17 @@
+#phone {background-color:#eee; padding:50px;}
+#phone #pay {width:1200px; margin:50px auto; border:2px solid #8b0101; border-left:0;border-right:0;}
+/* #phone {background-color:#eee;}
+#phone #pay {width:1200px; margin:50px auto; border:2px solid #8b0101; border-left:0;border-right:0;} */
+#phone #pay th,
+#phone #pay td {padding:10px;}
+#phone #pay thead tr {}
+#phone #pay thead tr:nth-child(1) {border-bottom:2px dotted #ccc;}
+#phone #pay thead tr:nth-child(2) {border-bottom:2px solid #8b0101;}
+#phone #pay thead tr th {}
+#phone #pay thead tr th img {width:32px;}
+#phone #pay thead tr th em {font-size:0.75rem; color: #888; display:block; padding:5px;}
+#phone #pay tbody {}
+#phone #pay tbody tr {}
+#phone #pay tbody tr td {width:240px; border-bottom:1px solid #ccc; text-align:center;}
+/* #phone #pay tbody tr {border-bottom:1px solid #ccc;}
+#phone #pay tbody tr td {width:200px; text-align:center;} */
