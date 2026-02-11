@@ -1,0 +1,63 @@
+body {
+    height:200vh;
+    background-image:url(../img/bg1.jpg);
+    /* background - 시작속성들은 배경이미지 전용 */
+    background-size:contain;
+    background-position:center 130%;
+    background-attachment:fixed; /* 스크롤 관계없이 배경고정 */
+} 
+/* background-size:100% auto;background-repeat:no-repeat; background-position:-100px 50%; */
+#slide_wrap {
+    width:549px; height:298px;
+    background-color:gray; /* 임시색상(test) apua, yellow 영문명색상, 실제 디자인색상 #... 핵사코드 */
+    margin:109px auto 0; 
+    overflow:auto; /* 피그마 넘친 콘텐츠 숨기기 (scroll(동작은js,잘사용X)/hidden/auto) */
+}
+#slide_wrap .slide_container {
+    width:max-content;/* 기본너비값 100% (부모와같음) */
+    }
+#slide_wrap .slide_container .slide {
+    width:549px; height:298px;
+    display:inline-block;
+}
+#slide_wrap .slide_container .slide:nth-child(1) {background-color:white;}
+#slide_wrap .slide_container .slide:nth-child(2) {background-color:whitesmoke;}
+#slide_wrap .slide_container .slide:nth-child(even) {background-color:white;}
+#slide_wrap .slide_container .slide:nth-child(3) {background-color:white;}
+#slide_wrap .slide_container .slide:nth-child(4) {background-color:whitesmoke;}
+#slide_wrap .prev {}
+#slide_wrap .next {}
+
+/*  */
+#best_slide_wrap {
+    width:1200px; height:400px;
+    background-color:black; /* 임시색상 */
+    margin:100px auto 0;
+    overflow:auto;
+}
+#best_slide_wrap .slide_container {
+    width:max-content;
+}
+#best_slide_wrap .slide_container .slide {
+    width:600px; height:400px; 
+    display:inline-block;
+    /*  display:inline-block;
+    margin-right:-3px; inline-block으로 옆으로 정렬시 기본여백발생으로 "margin-right:-3px" 제거하는 작업을 해줘야 함
+    옆으로 나열하는 레이아웃 속성 = float:left: */
+    float:left;
+}
+#best_slide_wrap .slide_container .slide:nth-child(1) {background-color:gainsboro;}
+#best_slide_wrap .slide_container .slide:nth-child(even) {background-color:grey;}
+#best_slide_wrap .slide_container .slide:nth-child(odd) {background-color:gainsboro;}
+#best_slide_wrap .slide_container .slide:nth-child(2) {background-color:grey;}
+#best_slide_wrap .slide_container .slide:nth-child(3) {
+    /* float:none; */
+    /* float:none -> float 모두해제 */
+    /* clear:both; */
+    /* clear:both -> 이전 형제에서 온 float 모두해제  */
+}
+#best_slide_wrap .slide_container .slide:nth-child(4) {background-color:grey;}
+#best_slide_wrap .slide_container .slide:nth-child(5) {background-color:gainsboro;}
+#best_slide_wrap .slide_container .slide:nth-child(6) {background-color:grey;}
+#best_slide_wrap .prev {}
+#best_slide_wrap .next {}
