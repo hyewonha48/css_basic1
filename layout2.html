@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>레이아웃 연습2</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/layout2.css">
+</head>
+<body>
+    <div id="new_wrap">
+        <h1>신상품</h1>
+        <div id="new_slide_wrap"> <!-- 뷰포트 -->
+            <div class="new_slides"> <!-- 배너부모 -->
+                <div class="slide slide1 ">
+                    <h1>신상품제목</h1>
+                    <a href="#">바로가기</a>
+                </div>
+                <div class="slide slide2 ">
+                    <h1>신상품제목</h1>
+                    <a href="#">바로가기</a>
+                </div>
+                <div class="slide slide3 ">
+                    <h1>신상품제목</h1>
+                    <a href="#">바로가기</a>
+                </div>
+                <div class="slide slide4 ">
+                    <h1>신상품제목</h1>
+                    <a href="#">바로가기</a>
+                </div>
+            </div>
+            <a href="#" class="prev">이전</a>
+            <a href="#" class="next">다음</a>
+            <div class="page">
+                <span class="current">1</span>
+                <span class="all">4</span>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="book_select">
+        <h1>독자들의 선택</h1>
+        <div id="book_slide_wrap"> <!-- 내용부모 -->
+            <div class="slide_wrap"> <!-- 뷰포트 -->
+                <div class="slides"> <!-- 배너부모 -->
+                    <a href="#" class="slide slide1"> <!-- 개별배너 -->
+                        <div class="thumnail"> <!-- bg -->
+                            <p>'왜 당신은 늘 인생만 탓하며살아가는가?'<br>철학의 결핍에 빠진 한국 현대인들에게 가장 필요한</p>
+                        </div>
+                        <div class="book_info">
+                            <p class="cover"><img src="./img/layout2_dd1.jpg" alt="왜 당신은 늘 인생만 탓하는가"></p>
+                            <dl>
+                                <dt>왜 당신은 늘 인생만 탓하는가</dt>
+                                <dd><img src="" alt=""><!-- *5 --><span class="score">5</span></dd>
+                                <dd class="review">리뷰 2개</dd>
+                            </dl>
+                        </div>
+                    </a>
+                    <a href="#" class="slide slide2"> <!-- 개별배너 -->
+                        <div class="thumnail"> <!-- bg -->
+                            <p>'왜 당신은 늘 인생만 탓하며살아가는가?'<br>철학의 결핍에 빠진 한국 현대인들에게 가장 필요한</p>
+                        </div>
+                        <div class="book_info">
+                            <p class="cover"><img src="./img/layout2_dd2.jpg" alt="왜 당신은 늘 인생만 탓하는가"></p>
+                            <dl>
+                                <dt>왜 당신은 늘 인생만 탓하는가</dt>
+                                <dd><img src="" alt=""><!-- *5 --><span class="score">5</span></dd>
+                                <dd class="review">리뷰 2개</dd>
+                            </dl>
+                        </div>
+                    </a>
+                    <a href="#" class="slide slide3"> <!-- 개별배너 -->
+                        <div class="thumnail"> <!-- bg -->
+                            <p>'왜 당신은 늘 인생만 탓하며살아가는가?'<br>철학의 결핍에 빠진 한국 현대인들에게 가장 필요한</p>
+                        </div>
+                        <div class="book_info">
+                            <p class="cover"><img src="./img/layout2_dd3.jpg" alt="왜 당신은 늘 인생만 탓하는가"></p>
+                            <dl>
+                                <dt>왜 당신은 늘 인생만 탓하는가</dt>
+                                <dd><img src="" alt=""><!-- *5 --><span class="score">5</span></dd>
+                                <dd class="review">리뷰 2개</dd>
+                            </dl>
+                        </div>
+                    </a>
+                    <a href="#" class="slide slide4"> <!-- 개별배너 -->
+                        <div class="thumnail"> <!-- bg -->
+                            <p>'왜 당신은 늘 인생만 탓하며살아가는가?'<br>철학의 결핍에 빠진 한국 현대인들에게 가장 필요한</p>
+                        </div>
+                        <div class="book_info">
+                            <p class="cover"><img src="./img/layout2_dd4.jpg" alt="왜 당신은 늘 인생만 탓하는가"></p>
+                            <dl>
+                                <dt>왜 당신은 늘 인생만 탓하는가</dt>
+                                <dd><img src="./img/layout2_dd4.jpg" alt=""><!-- *5 --><span class="score">5</span></dd>
+                                <dd class="review">리뷰 2개</dd>
+                            </dl>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button type="button" id="bk_selc_prev">이전</button>
+            <button type="button" id="bk_selc_next">다음</button>
+            <div class="pagination">
+                <a href="#" class="active"></a>
+                <a href="#"></a>
+                <a href="#"></a> 
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="today_book">
+        <div class="title">
+            <h1>오늘의 책</h1>
+            <a href="#" class="more">더보기</a>
+        </div>
+        <ul class="contents">
+            <li>
+                <div class="thumnail">
+                    <img src="https://cdn.ypbooks.co.kr/image/product/202602/7de15b7b-40fa-422b-aed1-d1e9bc5127f4_512.jpg" alt="인터메초">
+                    <div class="popup">
+                        <a href="#"></a>
+                        <div class="view_cart">
+                            <a href="#">view</a>
+                            <a href="#">cart</a>
+                        </div>
+                    </div>
+                </div>
+                <h2><a href="#">인터메초</a></h2>
+                <P class="author">셀리루니</P>
+            </li>
+                        <li>
+                <div class="thumnail">
+                    <img src="https://cdn.ypbooks.co.kr/image/product/202602/7de15b7b-40fa-422b-aed1-d1e9bc5127f4_512.jpg" alt="인터메초">
+                    <div class="popup">
+                        <a href="#"></a>
+                        <div class="view_cart">
+                            <a href="#">view</a>
+                            <a href="#">cart</a>
+                        </div>
+                    </div>
+                </div>
+                <h2><a href="#">인터메초</a></h2>
+                <P class="author">셀리루니</P>
+            </li>
+                        <li>
+                <div class="thumnail">
+                    <img src="https://cdn.ypbooks.co.kr/image/product/202602/7de15b7b-40fa-422b-aed1-d1e9bc5127f4_512.jpg" alt="인터메초">
+                    <div class="popup">
+                        <a href="#"></a>
+                        <div class="view_cart">
+                            <a href="#">view</a>
+                            <a href="#">cart</a>
+                        </div>
+                    </div>
+                </div>
+                <h2><a href="#">인터메초</a></h2>
+                <P class="author">셀리루니</P>
+            </li>
+                        <li>
+                <div class="thumnail">
+                    <img src="https://cdn.ypbooks.co.kr/image/product/202602/7de15b7b-40fa-422b-aed1-d1e9bc5127f4_512.jpg" alt="인터메초">
+                    <div class="popup">
+                        <a href="#"></a>
+                        <div class="view_cart">
+                            <a href="#">view</a>
+                            <a href="#">cart</a>
+                        </div>
+                    </div>
+                </div>
+                <h2><a href="#">인터메초</a></h2>
+                <P class="author">셀리루니</P>
+            </li>
+                        <li>
+                <div class="thumnail">
+                    <img src="https://cdn.ypbooks.co.kr/image/product/202602/7de15b7b-40fa-422b-aed1-d1e9bc5127f4_512.jpg" alt="인터메초">
+                    <div class="popup">
+                        <a href="#"></a>
+                        <div class="view_cart">
+                            <a href="#">view</a>
+                            <a href="#">cart</a>
+                        </div>
+                    </div>
+                </div>
+                <h2><a href="#">인터메초</a></h2>
+                <P class="author">셀리루니</P>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

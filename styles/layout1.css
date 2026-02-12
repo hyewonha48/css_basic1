@@ -1,6 +1,6 @@
 body {
     height:200vh;
-    background-image:url(../img/bg1.jpg);
+    background-image:url(../img/layout1_bg1.jpg);
     /* background - 시작속성들은 배경이미지 전용 */
     background-size:contain;
     background-position:center 130%;

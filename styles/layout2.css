@@ -1,0 +1,254 @@
+#new_wrap {
+    background-color:whitesmoke;
+    width:1200px; margin:0 auto;
+}
+/* 블록기본너비 100% (부모와같음) | 블록기본높이 auto (자식과같음) */
+#new_wrap > h1 {width:860px; margin:0 auto;}
+#new_wrap #new_slide_wrap { 
+    background-color:peachpuff;
+    width:860px; margin:0 auto;
+    overflow:hidden;
+    /* absolute 부모기준설정 */
+    position:relative;
+}
+#new_wrap #new_slide_wrap .new_slides {
+    background-color:gainsboro;
+/* float 적용전 자식높이를 인식해 자동으로 따라오는 부모 */
+/* float 적용후 부유한자식 요소로 인해 높이인식 불가 부모 : 해결법 = 넘친자식요소 재인식시키기 */
+overflow:hidden;
+/* 자식요소의 전체너비 설정 */
+/* width:max-content; */
+width:calc(860px * 4); /* calc 계산기함수사용,연산자 "*" 좌우여백필수 */
+}
+#new_wrap #new_slide_wrap .new_slides .slide {
+    border:2px solid black; 
+    width:860px;
+    height:450px; /* 실제크기가 필요한 주요요소(자식)한테 높이를 주면 그 부모요소들은 자동으로 자식과 크기가 같아진다 */
+    float:left;
+}
+#new_wrap #new_slide_wrap .new_slides .slide h1 {}
+#new_wrap #new_slide_wrap .new_slides .slide a {}
+#new_wrap #new_slide_wrap .new_slides .slide1 {background-color:olive;}
+#new_wrap #new_slide_wrap .new_slides .slide2 {background-color:olivedrab;}
+#new_wrap #new_slide_wrap .new_slides .slide3 {background-color:orange;}
+#new_wrap #new_slide_wrap .new_slides .slide4 {background-color:orangered;}
+#new_wrap #new_slide_wrap .prev {
+    background-color:oldlace;
+    /* relative 현재위치기준 */
+    /* position:relative; left:50px; top:-50px; */
+    /* absolute 부모위치기준 (기본부모 : body) */
+    /* 기준부모설정은 -> 부모 position 설정 */
+    position:absolute; left:0; top:45%;
+}
+#new_wrap #new_slide_wrap .next {
+    background-color:oldlace;
+    position:absolute; right:0; top:45%;
+}
+#new_wrap #new_slide_wrap .page {
+    background-color:blanchedalmond; 
+    position:absolute; right:50px; bottom:50px;
+}
+#new_wrap #new_slide_wrap .page .current {}
+#new_wrap #new_slide_wrap .page .all {}
+
+
+/* 영풍문고 독자들의 선택 (개별연습)
+#book_select {background-color:whitesmoke; width:1084px; margin:0 auto;}
+#book_select h1 {width:1084; margin:0 auto;}
+#book_select #book_slide_wrap {
+    background-color:oldlace;
+    width:1084px; margin:0 auto;
+    overflow:hidden;
+    position:relative;
+}
+#book_select #book_slide_wrap .slide_wrap {}
+#book_select #book_slide_wrap .slide_wrap .slides {
+    height:472PX; margin:0 auto;
+    width:calc(340px * 3);
+    overflow:hidden;
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide {
+    width:340px; height:472px; float:left;
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .thumnail {width:340px; height:324px;}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .thumnail:nth-child(1) {background-image:url(../img/);}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .thumnail:nth-child(2) {background-image:url();}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .thumnail:nth-child(3) {background-image:url();}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .thumnail:nth-child(4) {background-image:url();}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .thumnail p {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info .cover {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl dt {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl dd {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl dd img {width:340px; height:148px;}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl dd .score {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl .review {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide1 {background-color:olive;}
+#book_select #book_slide_wrap .slide_wrap .slides .slide2 {background-color:olivedrab;}
+#book_select #book_slide_wrap .slide_wrap .slides .slide3 {background-color:orange;}
+#book_select #book_slide_wrap .slide_wrap .slides .slide4 {background-color:orangered;}
+#book_select #book_slide_wrap #bk_selc_prev {
+    background-color:oldlace;
+    position:absolute;left:0.1%; top:47%;
+}
+#book_select #book_slide_wrap #bk_selc_next {
+    background-color:oldlace;
+    position:absolute; right:0.1%; top:47%
+}
+#book_select #book_slide_wrap .pagination {background-color:oldlace; text-align:center; margin:10px auto;}
+#book_select #book_slide_wrap .pagination a {
+    width:8px; height:8px; display:inline-block;
+    background-color:#aaa; border-radius:50%;
+}
+#book_select #book_slide_wrap .pagination a.active {
+    width:12px; height:12px;
+    background-color:gray;
+}
+ */
+/* 크기 > 나열 > 몇개볼지, 보이는 뷰포트 설정순 */
+/* 영풍문고 독자들의 선택 (썜) */
+#book_select {
+    background-color:whitesmoke;
+    width:1084px;
+    margin:0 auto;
+    position:relative; /* 이전, 다음 기준위치 설정 (부모) */
+}
+#book_select h1 {}
+#book_select #book_slide_wrap {}
+#book_select #book_slide_wrap .slide_wrap {
+    width:calc(340px * 3);
+    overflow:hidden;
+    margin:0 auto;
+}
+#book_select #book_slide_wrap .slide_wrap .slides {
+    /* width:max-content; or width:calc(340pc * 4); 2가지방법존재 */
+    width:calc(340px * 4);
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide {
+    width:340px;
+    height:472px;
+    display:block;
+    float:left;
+    
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .thumnail {
+    height:324px;
+    background-image:url(../img/layout2_thumnail_bg1.jpg);
+    background-size:340px auto;
+    background-position:center;
+    position:relative;
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .thumnail::after {
+    content:'';
+    display:block;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.3);
+    position:absolute; left:0; top:0;
+    z-index:40;
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .thumnail p {
+    color:#fff;
+    line-height:1.5; padding:40px 25px 0;
+    z-index:50; position:relative;
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info {
+    height:148px;
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info .cover {
+    float:left;
+    object-fit:cover;
+    width:auto; height:150px;
+    margin-right:10px;
+    padding:15px 0 15px;
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info .cover img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl {
+    float:left; padding-top:15px;
+    position:relative; /* after를 위한 부모기준 설정 */
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl > * {
+    position:relative; /* z-index 설정을 위한 준비속성 */ 
+    z-index:70; /* 기준형제보가 작은값 또는 높은 값 작성 */
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl::after {
+    content:''; /* 필수 */
+    display:block; /* 크기인식 */
+    width:100%; height:100%; /* 크기값적용 */
+    background-color:rgba(255,255,255,0.3); /* 투명도 */
+    position:absolute; /* 형제요소와 겹치기 (부모기준설정) */
+    left:0; top:0; /* 위치설정 */
+    z-index:60; /* 형제관계 중첩순서 설정 */
+}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl dt {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl dd {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl dd img {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl dd .score {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide .book_info dl .review {}
+#book_select #book_slide_wrap .slide_wrap .slides .slide1 {background-color:olive;}
+#book_select #book_slide_wrap .slide_wrap .slides .slide2 {background-color:olivedrab;}
+#book_select #book_slide_wrap .slide_wrap .slides .slide3 {background-color:orange;}
+#book_select #book_slide_wrap .slide_wrap .slides .slide4 {background-color:orangered;}
+#book_select #book_slide_wrap #bk_selc_prev,
+#book_select #book_slide_wrap #bk_selc_next {position:absolute; top:45%}
+#book_select #book_slide_wrap #bk_selc_prev {left:0;}
+#book_select #book_slide_wrap #bk_selc_next {right:0;}
+#book_select #book_slide_wrap .pagination {
+    background-color:oldlace;
+    text-align:center;
+    padding:10px 0;
+}
+#book_select #book_slide_wrap .pagination a {}
+#book_select #book_slide_wrap .pagination a.active {}
+
+/* 오늘의 책 (연습)
+#today_book {
+    width:1084px; margin:0 auto;
+    background-color:olive;
+}
+#today_book .title {display: flex;}
+#today_book .title h1 {text-align:left;}
+#today_book .title .more {text-align:right;}
+#today_book .contents {
+    display:flex;
+}
+#today_book .contents li {text-align:center; padding:10px;}
+#today_book .contents li .thumnail {}
+#today_book .contents li img {
+    width:193px;
+    margin:0 auto;
+}
+#today_book .contents li .popup {}
+#today_book .contents li .popup > a {}
+#today_book .contents li .popup .view_cart {}
+#today_book .contents li .popup .view_cart a {}
+#today_book .contents li h2 {}
+#today_book .contents li p {}
+#today_book .contents li .author {font-size:0.8rem;}
+ */
+
+
+/* 오늘의 책 (썜) */
+#today_book {
+    width:1084px; margin:0 auto;
+    background-color:olive;
+}
+#today_book .title {overflow:hidden; padding:10px 0;}
+#today_book .title h1 {float:left;}
+#today_book .title .more {}
+#today_book .contents {overflow:hidden;}
+#today_book .contents li {}
+#today_book .contents li .thumnail {}
+#today_book .contents li img {}
+#today_book .contents li .popup {}
+#today_book .contents li .popup > a {}
+#today_book .contents li .popup .view_cart {}
+#today_book .contents li .popup .view_cart a {}
+#today_book .contents li h2 {}
+#today_book .contents li p {}
+#today_book .contents li .author {margin-right:0;}
