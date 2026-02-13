@@ -247,9 +247,9 @@ width:calc(860px * 4); /* calc 계산기함수사용,연산자 "*" 좌우여백�
 #today_book .title .more {float:right;}
 #today_book .contents {overflow:hidden;} /* 자식 li float 적용으로, 부모인식을 위한 값 */
 #today_book .contents li {
-    width:193px;
-    margin-right:29px;
+    width:calc((100% - (29.7px * 4 )) / 5); /* width:193px; or width:calc((100% - (29.7px * 4 )) / 5); */
     float:left;
+    margin-right:29.7px;
     background-color:olive;
 } /* 옆으로 배치는 형제관계부터 생각하기 "float:left;" */
 #today_book .contents li .thumnail {position:relative;}
