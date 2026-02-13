@@ -111,7 +111,7 @@ width:calc(860px * 4); /* calc 계산기함수사용,연산자 "*" 좌우여백�
 #book_select {
     background-color:whitesmoke;
     width:1084px;
-    margin:0 auto;
+    margin:100px auto;
     position:relative; /* 이전, 다음 기준위치 설정 (부모) */
 }
 #book_select h1 {}
@@ -235,20 +235,55 @@ width:calc(860px * 4); /* calc 계산기함수사용,연산자 "*" 좌우여백�
 
 /* 오늘의 책 (썜) */
 #today_book {
-    width:1084px; margin:0 auto;
-    background-color:olive;
+    width:1084px; margin:100px auto;
+    background-color:orange;
 }
-#today_book .title {overflow:hidden; padding:10px 0;}
+#today_book .title {
+    background-color:orangered;
+    overflow:hidden; /* 자식 h1, more float로 인한 부모인식 속성 */
+    padding:10px 0;
+}
 #today_book .title h1 {float:left;}
-#today_book .title .more {}
-#today_book .contents {overflow:hidden;}
-#today_book .contents li {}
-#today_book .contents li .thumnail {}
-#today_book .contents li img {}
-#today_book .contents li .popup {}
-#today_book .contents li .popup > a {}
-#today_book .contents li .popup .view_cart {}
-#today_book .contents li .popup .view_cart a {}
+#today_book .title .more {float:right;}
+#today_book .contents {overflow:hidden;} /* 자식 li float 적용으로, 부모인식을 위한 값 */
+#today_book .contents li {
+    width:193px;
+    margin-right:29px;
+    float:left;
+    background-color:olive;
+} /* 옆으로 배치는 형제관계부터 생각하기 "float:left;" */
+#today_book .contents li .thumnail {position:relative;}
+#today_book .contents li .thumnail img {width:100%;} /* 부모 li의 너비값이 자식,자손 블록 100%로 인해 자동적용되는데 img는 인라인으로 자동적용이 안되기 때문에 직접 w100%를 입력해서 부모와 너비를 같게 만들어야 한다 */
+#today_book .contents li .thumnail .popup {
+    background-color:rgba(0,0,0,0.6); /* 부모 thumnail기준으로 왼쪽상단 위치같은 / 가로세로크기같음 */
+    width:100%; height:100%;
+    padding:10px; 
+    position:absolute; left:0; top:0;
+}
+#today_book .contents li .thumnail .popup > a {
+    line-height:1.5;
+    background-color:orangered;
+    display:block;
+    height:calc(100% - 30px ); /* height:85%; or height:calc(100% - 30px ); */
+}
+#today_book .contents li .thumnail .popup .view_cart {
+    position:absolute;
+    bottom:50px; left:0; width:100%;
+    text-align:center;
+}
+#today_book .contents li .thumnail .popup .view_cart a {
+    color:#fff;
+    border:1px solid #fff;
+    padding:5px 4px; border-radius:5px;
+    
+}
+#today_book .contents li .thumnail .popup .view_cart a:nth-child(1) {}
+#today_book .contents li .thumnail .popup .view_cart a:nth-child(2) {}
 #today_book .contents li h2 {}
-#today_book .contents li p {}
-#today_book .contents li .author {margin-right:0;}
+#today_book .contents li h2 a {}
+#today_book .contents li .author {}
+#today_book .contents li:nth-child(1) {}
+#today_book .contents li:nth-child(2) {background-color:olivedrab;}
+#today_book .contents li:nth-child(3) {}
+#today_book .contents li:nth-child(4) {background-color:olivedrab;}
+#today_book .contents li:nth-child(5) {margin:0px;}
