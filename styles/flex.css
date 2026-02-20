@@ -1,0 +1,23 @@
+.title {
+    background-color:oldlace;
+    width:350px; margin:50px auto 0;
+    display:flex;
+    justify-content:space-between; /* 메인축정렬속성 : flex 속성은 정렬하고자하는 대상의 부모에게 명령시작 | flex의 기본값은 메인축(수평)정렬 */
+    padding:0 10px;
+    align-items:center; /* 교차축정렬속성(1줄일때) */
+}
+.title h1 {font-size:1.2rem;}
+.title .more {font-size:0.75rem;}
+.contents {
+    background-color:oldlace;
+    width:350px; height:calc(50px * 3);
+    margin:10px auto 0;
+    display:flex;
+    flex-flow:column wrap; /* 요약flex-flow : flex-wrap:wrap; flex-direction:column; */
+    align-content:space-between;
+    justify-content:flex-end;
+    /* flex전용여백(item사이만적용) : gap:10px */
+}
+.contents li {width:calc((100% - 15px) / 4); height:50px;}
+.contents li:nth-child(odd) {background-color:olivedrab;}
+.contents li:nth-child(even) {background-color:orange;}
