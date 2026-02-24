@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로스펙스</title>
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body, html {background-color:#111;}
+        /* Firefox */
+        html {scrollbar-width: 10px; scrollbar-color: #000 #e61818;}
+        /* Opera */
+        html::-o-scrollbar {width: 10px;}
+        html::-o-scrollbar-thumb {background-color: #000;border-radius: 5px;}
+        /* Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
+        ::-webkit-scrollbar {width: 10px;}
+        ::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}
+        ::-webkit-scrollbar-thumb {background-color: #000;border-radius: 5px;}
+        #top_btn {
+            width:50px; line-height:50px; display:block; font-size:0.75rem;
+            border-radius:50%; text-align:center;
+            position:fixed; right:50px; bottom:50px; z-index:999;
+            background:#000; color:#fff;
+            box-shadow:0 0 10px rgba(255,255,255,0.25);
+            /* transition 효과적용 */
+            /* transition | 애니메이션적용속성 지속시간; */
+            transition:color 2s, background 1s, right 1s, bottom 1s, shadow 1s ;
+        }
+        /* 마우스 올렸을때 */
+        #top_btn:hover {
+            right:55px; bottom:55px;
+            background-color:#e61818;
+            box-shadow:0 0 30px #rgba(225,225,0,0.8);
+        }
+        /* herder */
+        header,main,footer,nav {min-width:1000px;}
+        header {
+            position:fixed;
+            z-index:999;
+            width:100%; text-align:center;
+            padding:15px 0;
+            top:15px; left:0;
+        }
+        header img {width:80px;}
+        nav {
+            width:100%; margin:80px auto 0; background:#222;
+            display:flex; justify-content:space-around;
+        }
+        nav a {position:relative /* a를 기준으로 하려고 */; display:inline-block; line-height:60px; padding:0 20px; color:#fff; font-size:0.875rem;}
+        nav a::after { /* 가상 마지막 자식요소 설계 */
+            content:''; /* 내용인식 */
+            display:block; /* 요소특징 */
+            width:0%; height:1px; /* 크기인식 */
+            background:#e73b3b; /* 색상인식 */
+            position:absolute; /* 디자인목적 위치설정 */
+            bottom:1px; left:0; /* 위치값 */
+            /* display:none; | 너비를 0으로 할땐 안보이니까 없어도 됨 */
+            transition:width 1s 0.5s;
+        }
+        nav a::before {
+            content:'';
+            display:block;
+            background:#e73b3b;
+            width:0%; height:1px;
+            position:absolute;
+            top:0; left:0;
+            /* display:none; */
+            /* transition:적용속성 지속시간 딜레이 */
+            /* 0.5초 딜레이 후, 1초동안 width 속성 애니메이션 적용 */
+            transition:width 0.5s;
+        }
+        nav a:hover::before {display:block; width:100%;}
+    
+        nav a:hover {color:#e73b3b;}
+        /* a에 올렸을때 가상요소 after가 none->blck으로 변함 */
+        nav a:hover::after {display:block; width:100%;} /* 가상요소는 공백없이 작성 */
+        main {}
+        main section {
+            height:100vh;
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+            /* 스크롤에따라 배경이미지 어떻게 할건지 | 기본값 scroll */
+            position:relative;
+        }
+        main section:nth-child(1) {background-image:url(images/optimize1.png);}
+        main section:nth-child(2) {background-attachment:scroll; background-image:url(https://images.unsplash.com/photo-1566932769119-7a1fb6d7ce23?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+        main section:nth-child(3) {background-image:url(https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+        main section h2 {
+            /* 형제랑 겹치기 위해서 -> X | 부모위치 기준으로 배치하기 위해서 -> O */
+            position:absolute; left:50px; bottom:50px;
+            font-size:3rem; font-weight:700; line-height:1.3; color:#fff;
+        }
+        footer {font-size:0.875rem; color:#aaa; text-align:center; padding:50px 0;}
+    </style>
+</head>
+<body>
+    <a href="#" id="top_btn">TOP</a>
+    <header>
+        <h1><img src="images/logo.svg" alt="프로스펙스"></h1>
+    </header>
+    <nav>
+        <a href="#">SHOP</a>
+        <a href="#">EVENT</a>
+        <a href="#">ARCHIVE</a>
+        <a href="#">SPONSORSHIP</a>
+        <a href="#">SMART FIT</a>
+    </nav>
+    <main>
+        <section></section>
+        <section><h2>새로워진<br>퍼포먼스 라인을 만나다</h2></section>
+        <section><h2>시선을 사로잡는<br>오리지널 스포츠 클럽</h2></section>
+    </main>
+    <footer>COPYRIGHT &copy; LS NETWORKS CO. ALL RIGHTS RESERVED
+    </footer>
+</body>
+</html>

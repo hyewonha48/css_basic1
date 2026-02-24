@@ -320,4 +320,16 @@
 *  `align-items:` 교차축이 1줄일때
  * `flex-start, flex-end, center` 위 메인축과 동일한 뜻
 * `align-content:` 교차축이 2줄 이상일때
- * `flex-start, flex-end, center, space-between : 메인축이 수직이라면 ~~~
+ * `flex-start, flex-end, center, space-between : 메인축이 수직이라면 ~~~ 다못씀
+## 스크롤 디자인
+`Firefox`
+html {scrollbar-width: 10px; scrollbar-color: #222 #e73b3b;}
+`Opera`
+html::-o-scrollbar {width: 10px;}
+html::-o-scrollbar-thumb {background-color: #222;border-radius: 5px;}
+`Chrome, Safari, Edge` 등 웹킷 기반 브라우저
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}
+::-webkit-scrollbar-thumb {background-color: #222;border-radius: 5px;}
+### `transition` : 애니메이션 효과
+### `nav a::after` : 가상요소는 여백없이
