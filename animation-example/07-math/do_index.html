@@ -31,21 +31,42 @@
         main #sub_title span:nth-child(2) {margin:20px 0 50px;}
         
         main #deco {position:relative; width:500px;height:350px; /* border:1px solid red; */}
-        main #deco .obj {position:absolute;}
-        /* 
-        1(주황선) 2(책) 3(문어) 4(벌) 5(꽃병) 6(별1) 7(별2)
-        */
-        main #deco .obj1 {z-index:9; right:0;}
-        main #deco .obj2 {z-index:10; top:-100px; left:-50px;}
-        main #deco .obj3 {z-index:9; right:190px; top:0;}
-        main #deco .obj4 {z-index:11; right:0; bottom:0;}
+        main #deco .obj {position:absolute;} /* 포지션 공통값 */
+        /* 1(주황Y:좌우모션) 2(책:오->왼) 3(문어:아래->위) 4(벌:오른쪽->왼쪽,대각선모션) 5(꽃병:좌우모션) 6(별1:커졌다->작아짐) 7(별2:커졌다->작아짐) */
+        main #deco .obj1 {/* animation:키프레임이름 지속시간 딜레이 재생방법 종료방법 반복; */
+            animation:y 1.5s alternate/* 재생방법:정>역:reverse>정방향 */
+            infinite/* 무한반복 */;
+            z-index:9; right:0px;}
+        main #deco .obj2 {animation:book 1.5s ; z-index:10; top:-100px; left:-40px;}
+        main #deco .obj3 {animation:octopus 0.5s 0.3s both; z-index:9; right:190px; top:0;} /* 0.3s기다렸다가 0.5s동안 재생 */
+        main #deco .obj4 {animation:bee 1s; z-index:11; right:0; bottom:0;}
         main #deco .obj5 {z-index:11; right:150px; bottom:0;}
-        main #deco .obj6 {z-index:12; left:-50px; bottom:100px;}
-        main #deco .obj7 {z-index:12; right:50px; top:-30px;}
+        main #deco .obj6 {animation:star 1s linear/* 일정한속도 | 미적용시 기본값:ease */ alternate infinite; z-index:12; left:-50px; bottom:100px;}
+        main #deco .obj7 {animation:star 1s linear alternate infinite; z-index:12; right:50px; top:-30px;}
         
-        /* 애니메이션 */
-        
-
+        /* 키프레임 | from {} to {} = 0% {} 100% {} */
+        @keyframes book {
+            from {left:40px;}
+            to {left:-40px;}
+        }
+        @keyframes flower {} /* ★ing★ */
+        @keyframes octopus {
+            from {top:0;}
+            to {top:-140px}
+        }
+        @keyframes bee {
+            0% {transform:translate(0)/* 이동 */ rotate()/* 회전 */;}
+            100% {transform:translate(-400px, 100px)/* 이동 */ rotate(360deg)/* 회전 */;}
+            /* ⓘ이렇게도해봄 | 100% {transform:translateY(100px) translateX(-400px) rotate(360deg);} */
+        }
+        @keyframes star {
+            0% {transform:scale(1)}
+            100% {transform:scale(1.5)}
+        }
+        @keyframes y {
+            0% {transform:rotate(-15deg);}
+            100% {transform:rotate(15deg);}
+        }
     </style>
 </head>
 <body>

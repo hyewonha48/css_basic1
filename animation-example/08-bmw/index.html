@@ -10,6 +10,7 @@
         #wrap {
             width:100%; /* height:100vh; */
             background:url(images/bmw_bg.jpg);
+            background-size:cover; background-position:center -350px; /* background-position : X축-> Y축 순서 */
             position:relative;
         }
         header {
@@ -21,18 +22,19 @@
             border-bottom:1px solid rgba(255,255,255,0.2);
             width:80%; margin:0 auto; display:flex; justify-content:space-around;
         }
-        header nav a {padding:10px 0; position:relative;}
+        header nav a {color:#fff; padding:10px 0; position:relative;}
         header nav a::after {
             content:''; display:block;
             width:100%; height:1px; background:#cae4ff;
             position:absolute; bottom:-1px;
+            transform:scaleX(0);
+            transition:transform 0.5;
         }
-
+        header nav a:hover::after {transform:scaleX(1);}
         main {position:relative; width:1400px; height:80vh; margin:0 auto;}
         main img {
             position:absolute; left:0; bottom:100px;
         }
-
     </style>
     <script>
         window.onload=function(){

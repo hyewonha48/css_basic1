@@ -10,30 +10,41 @@
         body, html {background:#da1e27;}
         header, main {width:1400px; margin:0 auto;}
         header {padding:30px 0;}
-        header img {width:100%;}
+        header img {width:100%; }
         main {height:800px; position:relative; display:flex; justify-content:space-between; padding:50px 0 0;}
         main .txt #order {
             background:#fff; border-radius:50px; text-align:center; padding:20px 0;
             display:inline-block; margin-top:50px; font-weight:600;
             width:200px; color:#000;
+            transition:width 0.5s, color 0.3s, box-shadow 0.5s;
         }
+        main .txt #order:hover {
+            width:250px;
+            color:#da1e27;
+            box-shadow:0 0 20px rgba(255, 243, 187, 0.3)}
         #sns {position:absolute; left:0; bottom:100px;}
         #sns a {
             display:inline-block; width:40px; margin:0 10px;
             position:relative; top:0;
+            transition:transform 0.5s;
         }
+        #sns a:hover {transform:translateY(-25px)}
         #sns a img {width:100%;}
         #dynamic #btn {display:flex; position:absolute; right:0; bottom:100px;}
         #dynamic #btn a {margin:0 5px;}
         #dynamic #btn a#prev {}
-        #dynamic #btn a#next {}
+        #dynamic #btn a#next {transform:scaleX(-1);} /* 좌우반전 */
+        /* 햄버거 */#wrap main
+        #dynamic #img {width:668px; height:596px; position:relative;} /* big1,big2 합쳐서 중앙정렬 */
+        #dynamic #img img {position:absolute;}
+        #dynamic #img #big1 {}
+        #dynamic #img #big2 {display:none;}
+        /* 이전,다음 마우스 올릴시 big2 보이기 */
+        #dynamic #btn:hover + #img #big2 {display:block;}
+        #dynamic #btn:hover + #img #big1 {display:none;}
     </style>
     <script>
-        window.onload=function(){
-
-            
-
-        }//e:onload
+        window.onload=function(){}//e:onload
     </script>
 </head>
 <body>
@@ -50,12 +61,13 @@
                 <a href="#"><img src="images/instagram.png" alt=""></a>
             </div>
             <div id="dynamic">
-                <div id="img">
-                    <img src="images/menu1.png" alt="" id="big">
-                </div>
                 <div id="btn">
                     <a href="#" id="prev"><img src="images/prev_next.png" alt=""></a>
                     <a href="#" id="next"><img src="images/prev_next.png" alt=""></a>
+                </div>
+                <div id="img">
+                    <img src="images/menu1.png" alt="" id="big1">
+                    <img src="images/menu3.png" alt="" id="big2">
                 </div>
             </div>
         </main>

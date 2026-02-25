@@ -1,3 +1,4 @@
+html {scroll-behavior:smooth;} /* scroll-behavior : 스크롤 동작 부드럽게 */
 /*popup*/
 .popup {z-index:999;position:fixed; right:0; top:0; height:100vh; width:50px; text-align:center;}
 .popup .page_num {
@@ -33,26 +34,37 @@ header nav > ul {
 }
 header nav > ul > li {padding:0 10px; position:relative;}
 header nav > ul > li > a {}
-header nav > ul > li > .sub {
-    position:absolute; 
-}
+header nav > ul > li:hover .sub {opacity:1; top:20px;} /* 마우스 올렸을때 변경 */
+header nav > ul > li > .sub { /* 변경대상 */
+    position:absolute;
+    top:-90px; opacity:0;
+    transition:top 0.5s, opacity 0.5s;
+} 
 header nav > ul > li > .sub li {width:100px; padding: 10px 0 0;}
 header nav > ul > li > .sub li a {}
 header nav > ul > li > .sub li a:hover {color:#ddd;}
 /*section*/
 section {}
 section .sec1 {background-image:url(../images/main_bg_01.jpg)}
-section .sec2 {background-image:url(../images/main_bg_02_3.jpg)}
+section .sec2 {background-image:
+    url(../images/main_bg_02_2.png), /* 사람(고정) */
+    url(../images/main_bg_02_4.png), /* 행성(고정) */
+    url(../images/main_bg_02_3.jpg); /* 우주(스크롤) */
+    background-size:200px, contain, cover;
+    background-position:left top, center bottom, center;
+    background-attachment:fixed, fixed, scroll;
+}
 section .sec3 {background-image:url(../images/main_bg_03.jpg)}
 section > div {
-    background-size:cover; background-position:center;
+    background-size:cover/* section .sec2 url 이미지가 커서 개별로  */;
+    background-position:center;
     text-align:center; height:100vh; width:100%; 
     display:flex; flex-flow:column wrap; justify-content:center; color:#fff;
 }
 section > div:nth-child(2) {
     background-repeat:no-repeat;
-    background-size:cover, cover;
-    background-position:40% center, center;
+    /* background-size:cover, cover;
+    background-position:40% center, center; */
 }
 section > div h1 {
     font-family: 'Pattaya', sans-serif;
@@ -61,7 +73,7 @@ section > div h1 {
 section > div p {font-size:0.875em; letter-spacing:-0.2px; line-height:1.7;}
 /*footer*/
 footer {
-    position:fixed; left:0; bottom:0; height:100px;
+    position:relative; left:0; bottom:0; height:100px;
     width:100%; color:#fff; font-size:0.875em; letter-spacing:-0.5px; padding:15px 0;
 }
 footer p {max-width:1200px; line-height:1.5; margin:0 auto;}

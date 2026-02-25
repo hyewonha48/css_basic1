@@ -331,5 +331,46 @@ html::-o-scrollbar-thumb {background-color: #222;border-radius: 5px;}
 ::-webkit-scrollbar {width: 10px;}
 ::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}
 ::-webkit-scrollbar-thumb {background-color: #222;border-radius: 5px;}
-### `transition` : 애니메이션 효과
-### `nav a::after` : 가상요소는 여백없이
+### transition : 애니메이션 효과
+### nav a::after : 가상요소는 여백없이
+* 가상 마지막 자식요소 설계
+ * `content:'';` -> 내용인식
+ * `display:block;` -> 요소특징
+ * `width:0%; height:1px;` -> 크기인식
+ * `background:#e73b3b;` -> 색상인식
+ * `position:absolute;` -> 디자인목적 위치설정
+ * `bottom:1px; left:0;` -> 위치값 
+ * `display:none;` -> 너비를 0으로 할땐 안보이니까 없어도 됨
+ * `transition:width 1s 0.5s;` ->
+## transition
+* `hover` 선택자로 인해 기존속성에서 다른속성으로 변경되는 css에 애니메이션을 주고 싶을때
+ * `선택자 {color:#000; font-size:1rem;}`
+ * `선택자:hover {color:#FFF'}`
+ * 위 선택자 예시 -> color만 hover시 변경됨.
+ * 아래 연결동작 -> 변경된 color만 transition작용
+ * `선택자 {transition:color 1s; color:#000; font-size:1rem;}`
+* 문법 : `transition:변경속성 지속시간 속도 지연시간`
+* `transition:color 1s linear 2s`
+* 2초 기다리고 1초동안 일정속도로 color속성에 애니적용
+<!-- * `transition` : 중심축으로 확장되며 사용할때는 :hover(x) 기존확장자(o)
+* `transition:ro` : 회전 -->
+## animation + @keyframes
+### 적용순서
+1. `@keyframes 애니메이션이름 {적용분기}`
+2. `선택자 {animation:키프레임애니메이션이름 추가속성;}`
+### 개념 및 주의사항
+* `hover + transition`은 사용자의 키보드, 마우스 동작에 따라 나타나는 애니메이션
+* `keyframes + animation`은 페이지로딩시 등장 애니메이션, 스크롤 내릴시 나타나는 컨텐츠의 등장 애니메이션 등에 사용함 (사용자 hover 동작과는 대부분 관계없음)
+### 명령해석
+* `@keyframes a {0% {opacity:0;} 100% {opacity:1;}}`
+ * 애니메이션이름 a 생성후 안보이다가 보이는 애니메이션
+* `선택자 {animation:a 1s ease 0.5s alternate 3;}`
+ * 특정 선택자에 0.5초 기다리고 1초동안 a 애니메이션을 ease 가속도로 정방향 -> 역방향 순서로 3번 재생하기 (무한재생 : `infinite`)
+## transform
+ * transform, animation 속성과 함께 특이한 애니메이션에 자주 활용하는 변형속성
+ * `transform:scale(1)` 비율기준 1=100%
+ * `transform:rotate(20deg)` 반시계방향회전 = `-20deg`
+ * `transform:skew(-20deg)`
+ * `transform:translate(10px, 20px)` x, y 이동순서로 작성
+ * 다른 모든 속성은 중심이 왼쪽상단, **transform만 유일하게 가운데 기준**
+ * 기준점 변경방법 : `transform-origin:x y`

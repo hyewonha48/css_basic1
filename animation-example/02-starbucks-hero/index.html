@@ -18,19 +18,39 @@
         }
         #v_btn {
             position:absolute; left:0; bottom:20px; width:100%;
-            display:flex; justify-content: center;
+            display:flex; flex-flow:row nowrap;justify-content:center;
         }
         #v_btn a {
             width:50px; margin:0 10px; 
             display:flex; align-items:flex-end;
         }
-        #v_btn a img {width:100%;}
+        #v_btn a img {
+            width:100%;
+            transition:transform 0.5s;
+        }
+        #v_btn a:first-child {
+            transform:scale(0.8); /* 기본사이즈 = 1, 1 = 100% | #v_btn a 값 : width:50px; */
+            transition:transform 0.5s;
+        }
+        #v_btn a:first-child:hover { /* 첫번째 a에 마우스 올렸을때 */
+            transform:scale(1);
+        }
+        #v_btn a:nth-child(2) {
+            /* 기준점 바꾸기 (기본:center->중앙) */
+            transform-origin:left top;
+            transform:scale(0.8) rotate(0); /* 기본값 = 0, 0 = 회전X */
+            transition:transform 0.5s;}
+        #v_btn a:nth-child(2):hover {transform:scale(1.025) rotate(20deg)}
+        #v_btn a:last-child {
+            transform:scale(0.8) skew(0);
+            transition:transform 0.5s;
+        }
+        #v_btn a:last-child:hover {transform:scale(1) skew(-20deg)}
+        #v_btn a:last-child:hover img {transform:translateX(15px);}
+
     </style>
     <script>
         window.onload=function(){
-
-            
-
         }//e:onload
     </script>
 </head>

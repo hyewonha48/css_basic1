@@ -22,40 +22,47 @@
         main #visual {background:#26bad7; min-width:1200px; margin:0 auto; height:550px; position:relative;}
         main #visual #deco {position:relative; width:1200px; margin:0 auto;}
         main #visual #deco .obj {position:absolute;}
-
-        main #visual #deco .obj1 {
-            top:170px; left:50%; margin-left:-342px;
-        }
-        main #visual #deco .obj2 {
-            left:0; top:150px;
-        }
-        main #visual #deco .obj3 {
-            left:100px; top:250px;
-        }
-        main #visual #deco .obj4 {
-            left:150px; top:350px;
-        }
-        main #visual #deco .obj5 {
-            right:0; top:150px;
-        }
-        main #visual #deco .obj6 {
-            right:200px; top:250px;
-        }
-        main #visual #deco .obj7 {
-            right:200px; top:240px;
-        }
-        main #visual #deco .obj8 {
-            left:270px; top:440px;
-        }
-        main #visual #deco .obj9 {
-            right:0; top:440px;
-        }
-
+        /* 1.책표지뒤선 2,4,7,9.왼쪽위빛 3.첨성대 5.기와집 6.돌하르방 8.경복궁 */
+        main #visual #deco .obj1 {animation:rotate 3s linear alternate-reverse infinite; top:170px; left:50%; margin-left:-342px;}
+        main #visual #deco .obj2 {left:0; top:150px;}
+        main #visual #deco .obj3 {left:100px; top:250px;}
+        main #visual #deco .obj4 {left:150px; top:350px;}
+        main #visual #deco .obj5 {right:0; top:150px;}
+        main #visual #deco .obj6 {right:200px; top:250px;}
+        main #visual #deco .obj7 {right:200px; top:240px;}
+        main #visual #deco .obj8 {left:270px; top:440px;}
+        main #visual #deco .obj9 {right:0; top:440px;} /* 동일한 애니메이션일때는 그룹묶어서 */
+        main #visual #deco .obj2,
+        main #visual #deco .obj4,
+        main #visual #deco .obj7,
+        main #visual #deco .obj9 {animation:scale 1s linear alternate infinite;}
         main #book_center {
             position:absolute; 
             left:50%; bottom:-50px; margin-left:-181px;
             display:flex;
         }
+        main #visual #deco .obj2,
+        main #visual #deco .obj4,
+        main #visual #deco .obj7,
+        main #visual #deco .obj9 {animation:scale 1s linear alternate infinite;}
+        main #book_center {
+            position:absolute; 
+            left:50%; bottom:-50px; margin-left:-181px;
+            display:flex;
+        }
+        main #visual #deco .obj2,
+        main #visual #deco .obj4,
+        main #visual #deco .obj7,
+        main #visual #deco .obj9 {animation:scale 1s linear alternate infinite;}
+        main #book_center {
+            position:absolute; 
+            left:50%; bottom:-50px; margin-left:-181px;
+            display:flex;
+        }
+        main #visual #deco .obj3,
+        main #visual #deco .obj6 {animation:rotate 10s linear alternate infinite;}
+        main #visual #deco .obj5,
+        main #visual #deco .obj8 {animation:rotate 10s linear alternate-reverse infinite;}
         /* 카테고리 */
         main .category {
             display:flex; justify-content:space-between;
@@ -67,9 +74,16 @@
             text-align:center; background:#f1f1f1; color:#222;
         }
         main .category a.active {background:#26bad7; color:#fff;}
-
-        /* 애니메이션 */
-
+        /* 키프레임/애니메이션 : 회전 */
+        @keyframes rotate {
+            0% {transform:rotate(-20deg)}
+            100% {transform:rotate(20deg)}
+        }
+        /* 크기 | 다중키프레임이 적용될땐 공통이름으로 단순하게 정하기 */
+        @keyframes scale {
+            0% {transform:scale(1)}
+            100% {transform:scale(1.3)}
+        }
     </style>
 </head>
 <body>

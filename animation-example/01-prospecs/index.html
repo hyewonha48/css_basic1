@@ -43,10 +43,15 @@
             padding:15px 0;
             top:15px; left:0;
         }
-        header img {width:80px;}
+        header img {width:70px; height:100%;}
         nav {
-            width:100%; margin:80px auto 0; background:#222;
+            width:100%; margin:70px auto 0; background:#222;
             display:flex; justify-content:space-around;
+            /* 처음부터 화면고정 */            
+            /* position:fixed; left:0; top:0; width:100%; z-index:100; */
+            /* 스크롤이동과 함께 특정위치에 닿으면 고정 */
+            position:sticky; left:0; top:0; width:100%; z-index:100;
+            /* sticky주의 : sticky 적용대상의 부모가 전체 웹사이트의 높이와 같아야함 (body 또는 #wrap 같은) */
         }
         nav a {position:relative /* a를 기준으로 하려고 */; display:inline-block; line-height:60px; padding:0 20px; color:#fff; font-size:0.875rem;}
         nav a::after { /* 가상 마지막 자식요소 설계 */
