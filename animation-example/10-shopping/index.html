@@ -22,10 +22,17 @@
             display:flex; justify-content:space-between;
             flex-flow:column wrap;
         }
-        main section a .img img {width:100%; border-radius:3px;}
-        main section a:hover .img img {}
+        main section a .img {border-radius:3px; height:250px; overflow:hidden;} /* 부모안에서 커지게 */
+        main section a .img img {
+            width:100%;
+            transform:scale(1);
+            transform-origin:center top; /* 위쪽중앙으로 커지게 */
+            transition:transform 0.5s; /* 중앙으로 커지게 */
+        }
+        main section a:hover .img img {transform:scale(1.2);}
         /* 상품 내용 디자인 상세 */
         main a > span {font-size:0.91rem; letter-spacing:-0.5px; line-height:1.5;}
+        main a > span:hover {}
         main a .name {padding:0 0 5px; margin:0 0 5px; border-bottom:1px solid #ccc;}
         main a .price {margin:0 0 5px;}
         main a .price del {color:#aaa;}
@@ -43,7 +50,7 @@
     <main>
         <h1><img src="images/new.jpg" alt=""></h1>
         <section>
-            <a href="#">
+            <a href="#"> 
                 <span class="img"><img src="images/product1.jpg" alt=""></span>
                 <span class="name">아멜리에 플리츠 원피스</span>
                 <span class="price"><del>67,000원</del> <em>64,400원</em>(5%)</span>

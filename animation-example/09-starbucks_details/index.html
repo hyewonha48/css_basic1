@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>음료 | 스타벅스 코리아</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="reset.css">
     <style>
         /* design */
@@ -35,6 +36,14 @@
         .menu_contents .menu {
             display:flex; justify-content:space-between;
             position:absolute; left:0; top:0;
+            display:none; /* 모두숨기기 (초기값) */
+        }
+        .menu_contents .menu1 {display:flex;}/* 특정 활성화 */
+        .menu_contents .menu1 a {
+            margin-right: 10px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
         }
         .menu_contents .menu a {
             margin-right:10px; overflow:hidden; position:relative;
@@ -43,31 +52,32 @@
         .menu_contents .menu a:last-child {margin-right:0}
         .menu_contents .menu a img {width:100%;}
         /* 커피정보 */
+        .menu_contents .menu a:hover .info {opacity:1;} /* .menu 공통클래스라서 menu1~3 전부적용 */
         .menu_contents .menu .info {
             background:rgba(0,102,51,0.8); /*#006633 == rgb(0,102,051)*/
-            color:#fff;
             width:100%; height:100%; display:block;
             position:absolute; left:0; top:0;
             text-align:center;
+            /* display:none; 애니메이션불가 */
+            opacity:0;
+            transition:opacity 0.5s;
         }
         .menu_contents .menu .info span:first-child {padding-top:40%;}
         .menu_contents .menu .info span {
             display:block; font-weight: 600;
-            line-height:1.5;
+            line-height:1.5; color:#fff;
         }
         /* active class + animation */
         .active {font-weight:800;}
         .active::after {
             content:''; display:block;
             width:100%; height:2px; background:#006633;
-            position:absolute; bottom:-10px; left:0;
+            position:absolute; bottom:-10px; left:0; 
         }
     </style>
     <script>
         window.onload=function(){
-
             
-
         }//e:onload
     </script>
 </head>
@@ -80,9 +90,30 @@
         <div class="sub_title">분류 보기</div>
         <a href="#" class="category"><img src="images/category_title.jpg" alt=""></a>
         <div class="category_menu">
-            <a href="#" class="active">콜드브루커피</a>
-            <a href="#">에스프레소</a>
-            <a href="#">프라푸치노</a>
+            <a href="#" class="active"
+            onclick="$('.menu').hide();
+            $('.menu1').css('display','flex');
+            // $('.menu1').css('transform','rotate(10deg)');
+            // 클릭시 active 클래스 변경하기
+            $('.category_menu a').removeClass();
+            $('.category_menu a:nth-child(1)').addClass('active');
+            ">콜드브루커피</a>
+            <a href="#"
+            onclick="$('.menu_contents .menu').hide();
+            // $('.menu2').show(); display:block 명령어
+            $('.menu2').css('display','flex');
+            // 클릭시 active 클래스 변경하기
+            $('.category_menu a').removeClass();
+            $('.category_menu a:nth-child(2)').addClass('active');
+            ">에스프레소</a>
+            <!-- onclick="$('')" => 목적대상 | jquery 안에서 작성하겠다는 뜻 / .hide() / .css()  => 상태(어떻게 처리할껀지) -->
+            <a href="#"
+            onclick="$('.menu').hide();
+            $('.menu3').css('display','flex');
+            // 클릭시 active 클래스 변경하기
+            $('.category_menu a').removeClass();
+            $('.category_menu a:nth-child(3)').addClass('active');
+            "></a>프라푸치노</a>
         </div>
         <div id="menu_title"><!-- javascript --></div>
         <div class="menu_contents">

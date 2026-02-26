@@ -6,8 +6,9 @@ header {
     align-items:center; z-index:999;
     position:fixed; left:50%; top:0; margin-left:-700px;
 }
-header nav a {margin:0 7px;}
+header nav a {color:#fff; margin:0 7px;}
 header .right a {
+    color:#fff;
     position:relative; padding:5px 5px 5px 27px;
     border:1px dashed rgba(255,255,255,0.6); 
     font-size:0.875rem; border-radius:3px;
@@ -29,6 +30,37 @@ main {
     top: 80px;
     text-align: center;
 }
+main::before, main::after {
+    content:''; display:block; /* before,after 가상요소 ★필수속성★ */
+    position: absolute; /* 형제랑 겹치는 위치속성 */
+    width:50%; height:100%; /*  부모에 상대적인 크기  */
+    z-index:30; /* 형제랑 겹치는 중첩순서 */
+    top:0; /* 좌표설정 */
+}
+main::before {
+    left:0; /* 좌표설정 */
+    background:linear-gradient(90deg, rgb(9, 13, 43), transparent);
+    
+}
+main::after {
+    right:0;
+    background:linear-gradient(-90deg, rgb(9, 13, 43), transparent);
+}
+/* ⓘ이렇게도 할수있음
+main::before { 
+    position: absolute;
+    width:50%; height:100%;
+    z-index:29;
+    left:0; top:0;
+    background:linear-gradient(90deg, rgb(9, 13, 43), transparent);
+    content:''; display:block;}
+main::after { 
+    position: absolute;
+    width:50%; height:100%;
+    z-index:29;
+    right:0; top:0;
+    background:linear-gradient(-90deg, rgb(9, 13, 43), transparent);
+    content:''; display:block;} */
 main > * {max-width:1400px; margin:0 auto;}
 /* 중첩순서 처리 배경(10) 그라디언트(20) 나머지(30) */
 main .bg_wrap {position:absolute; z-index:10;}

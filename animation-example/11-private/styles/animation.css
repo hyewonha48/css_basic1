@@ -1,0 +1,28 @@
+@keyframes rotate360 { /* 회전 */
+    0% {transform:rotate(0);}
+    100% {transform:rotate(360deg);}}
+main .car #left_tire, 
+main .car #right_tire {animation:rotate360/* 회전 */ 3s linear/* 일정속도 */ infinite/* 무한반복 */;}
+
+@keyframes right_center_opacity { /* 우 -> 가운데 */
+    0% {transform:translateX(500px); opacity:0;}
+    100% {transform:translateX(0); opacity:1;}}
+main .car {animation:right_center_opacity 1s both/* 1회(한번하고멈춤) */;}
+
+/* position:; 요소이동 /  background-position:; 요소고정, 요소 안 배경이미지 이동 */
+/* background-position:x y; background-position-x:x; */
+@keyframes bg_right_center { /* 우 -> 가운데 */
+    0% {background-position-x:0;}
+    100% {background-position-x:1000px;}}
+main .bg_wrap .bg1 {animation:bg_right_center 50s linear/* 일정속도 */ infinite/* 무한반복 */;}
+main .bg_wrap .bg2 {animation:bg_right_center 30s linear/* 일정속도 */ infinite/* 무한반복 */;}
+main .bg_wrap .bg3 {animation:bg_right_center 10s linear/* 일정속도 */ infinite/* 무한반복 */;}
+
+@keyframes top_bottom { /* 위<->아래 */
+    0% {transform:translateY(0);}
+    100% {transform:translateY(8px);}}
+main .scroll {animation:top_bottom 5s alternate/* 돌아올때도 스무스 */ linear/* 일정속도 */ infinite/* 무한반복 */;}
+footer {
+    height:200px; color:#fff;
+    /* 연습 */background:linear-gradient(40deg, olivedrab, transparent/* 투명하게(약간opacity재질) */, orange,orangered, rgba(255,255,255,0.5));
+}

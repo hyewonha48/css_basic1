@@ -365,7 +365,7 @@ html::-o-scrollbar-thumb {background-color: #222;border-radius: 5px;}
 * `@keyframes a {0% {opacity:0;} 100% {opacity:1;}}`
  * 애니메이션이름 a 생성후 안보이다가 보이는 애니메이션
 * `선택자 {animation:a 1s ease 0.5s alternate 3;}`
- * 특정 선택자에 0.5초 기다리고 1초동안 a 애니메이션을 ease 가속도로 정방향 -> 역방향 순서로 3번 재생하기 (무한재생 : `infinite`)
+ * `alternate` 특정 선택자에 0.5초 기다리고 1초동안 a 애니메이션을 ease 가속도로 정방향 -> 역방향 순서로 3번 재생하기 (무한재생 : `infinite`)
 ## transform
  * transform, animation 속성과 함께 특이한 애니메이션에 자주 활용하는 변형속성
  * `transform:scale(1)` 비율기준 1=100%
@@ -374,3 +374,9 @@ html::-o-scrollbar-thumb {background-color: #222;border-radius: 5px;}
  * `transform:translate(10px, 20px)` x, y 이동순서로 작성
  * 다른 모든 속성은 중심이 왼쪽상단, **transform만 유일하게 가운데 기준**
  * 기준점 변경방법 : `transform-origin:x y`
+## webkit
+* 글자안에서 그라데이션 효과 및 배경이미지를 마스크씌어서 보여주고 싶을때 사용하는 속성값 모음
+ * -webkit-background-clip: text;
+ * -webkit-text-fill-color: transparent;
+ * background-clip: text;
+ * color: transparent;

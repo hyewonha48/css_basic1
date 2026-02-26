@@ -8,16 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <style>
         body, html {background:#222;}
-        main {width:100%; height:100vh; display:flex; flex-flow:column nowrap; justify-content: center; align-items: center;}
+        main {width:100%; min-height:100vh; display:flex; flex-flow:column nowrap; justify-content: center; align-items: center;}
         main h1 {
             margin:0 auto; font-weight:700; 
             font-size:5rem; text-align: center;
             background: linear-gradient(to right, #ff00ff, #00ffff, #ff00ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent;
+            /* webkit- 파이어폭스, 크롬등 브라우저에서 안전하게 속성적용하는 웹브라운 엔진 명령어 */
+            /* 글자안에서 그라데이션 효과 및 배경이미지를 마스크씌어서 보여주고 싶을때 사용하는 속성값 모음 */
+            -webkit-background-clip: text; /* webkit=같은말이 두번 적힌 이유 */
+            -webkit-text-fill-color: transparent; /* webkit=같은말이 두번 적힌 이유 | transparent:글자색을 투명으로 바꿔놈 */
+            background-clip: text; /* 호환,안전성으로 webkit,일반 2번입력 */
+            color: transparent; /* 호환,안전성으로 webkit,일반 2번입력 */
         }
+        
         main h2 {
             font-family: 'Black Ops One';
             text-shadow:0 0 20px rgba(255,255,255,0.2);
@@ -28,15 +31,35 @@
             background-clip: text;
             color: transparent;
         }
+        main h3 {
+            font-family:'Black Ops One'; font-size:10rem;
+            text-align:center; font-weight:700;
+            background:url(./images/beef_img.jpg);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        main h4 {
+            font-family:'Black Ops One'; font-size:10rem;
+            text-align:center; font-weight:700;
+            background: linear-gradient(to right, #ffecbd, #ffb974, #ffecbd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
         p {width:30px;}
         p img {width:100%;}
         p:nth-child(1) img {}
         footer {position:fixed; bottom:50px; right:50px;}
         footer img {width:24px;}
         footer img:nth-child(1) {margin-right:10px;}
-        @keyframes bg-gradient {
-            0% {}
-            100% {}
+
+        @keyframes h3 {
+            0% {background-position-x:0;}
+            100% {background-position-x:50px;}
         }
     </style>
 </head>
@@ -45,6 +68,8 @@
         <p><img src="./images/arrow.png" alt=""></p>
         <h1>PORTFOLIO</h1>
         <h2>PROJECT</h2>
+        <h3>BEEF</h3>
+        <h4>SAUCE</h4>
         <p><img src="./images/arrow.png" alt=""></p>
     </main>
     <footer>
