@@ -1,0 +1,63 @@
+#wrap {
+    border:1px solid #000;
+}
+#wrap > * {
+    max-width:1300px; /* 최대 1300까지 커지고 그 이하는 자동 가변형(%) */
+    min-width:320px; /* 전체범위값 중 가장 큰값 & 작은값 미리 세팅하기 */
+    margin:0 auto;
+    font-size:3rem;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: center; /* <-수직센터 수평센터-> */ align-items: center;
+}
+#wrap header {
+    background-color:aqua;
+    height:80px;
+}
+#wrap main {
+    background:linear-gradient(pink,purple,pink);
+    height:300vh;
+}
+#wrap footer {
+    background-color:yellow;
+    height:120px;
+}
+/* 
+## 반응형 웹 설정
+* 설계방향
+ * 1. 모바일 -> pc 점점크게 (min-width)
+ * 2. pc -> 모바일 점점작게 (max-width)
+* @keyframes 애니메이션이름 {애니메이션규칙} -> animation
+* @media screen and (규칙) {실행명령어}
+* @media screen and (w320~) {320이상일때 재배열 명령어}
+* @media screen and (w760~) {760이상일때 재배열 명령어} (=미디어쿼리)
+* media 규칙괄호안에 세미콜론(;) 금지
+### 반응형 제작 주의사항
+* 1. @media 규칙선언전 기존CSS에서 유지하고 싶은건 쓰지않기
+* 2. @media 규칙선언 후 재배열하고 싶은 CSS은 반드시 기존 CSS에서 어느선택자에 어떤값으로 썼는지 확인하고 동일한 선택자에 동일속성으로 값만 바꿔 입력하기
+*/
+@media screen and (max-width:1299px) { /* 1299 이하일때 */
+     /* {}중괄호 안 선택자와 값들을 실행 */
+    #wrap > * {
+        flex-flow:column nowrap;
+        font-size:2rem;
+    }
+    #wrap header {background:palevioletred;}
+    #wrap main {background:linear-gradient(powderblue,blue,powderblue);}
+    #wrap footer {background:orangered;}
+} /* 801~1299px */
+/* 새로운 규칙은 기존규칙 밖에서 */
+@media screen and (max-width:800px) {
+    #wrap > * {align-items:flex-end;}
+} /* 721~800px */
+@media screen and (max-width:720px) {
+    #wrap {display:flex; flex-flow:row wrap;}
+    #wrap > * {max-width:100%; min-width:min-content;}
+    #wrap header {width:200px; height:100vh;}
+    #wrap main {width:calc(100% - 200px); height:100vh;}
+    /* #wrap header { "연습"
+        width:200px; height:100vh;
+        position:absolute; z-index:20;}
+    #wrap main {height:100vh; z-index:10;} */
+    #wrap footer {width:100%;}
+} /* 320~720px */

@@ -1,0 +1,50 @@
+#wrap {}
+#wrap > * {
+    height: 80px; border: 2px solid #000; padding:20px;
+}
+#wrap main {
+    height:200vh; background-color: #ddd;
+}
+/* swiper css 직접입력시 주의사항 */
+/* 1. swiper 적용태그는 플러그인 CDN연결파일에 의해서 기본값들이 먼저 내장되어 있기때문에 반드시 F12 개발자도구로 체크하고 필요한 값만 구분해서 넣어야 한다. */
+/* 2. css 디자인 입력시 적용이 안된다면 기본값과 충돌되는지 개발자도구로 css우선순위를 확인하고 올바른 대상에 적용한다 */
+/* 3. swiper, swiper-wrapper, swiper-slide 3요소에는 레이아웃 관련 css 삽입시 신중하게 한다 */
+
+#wrap main .hero_bnr {background-color: aqua; width: 600px; height:400px;}
+/* swiper-wrapper, swiper-slide는 개별크기 입력하지 않기 */
+/* swiper-flugin 대표 CSS 내장속성 : 값 */
+/* 1. swiper : position, transform */
+/* 2. swiper-wrapper : flex */
+/* 3. swiper-slide : position, transform */
+#wrap main .hero_bnr .swiper-wrapper {}
+#wrap main .hero_bnr .swiper-wrapper .swiper-slide {
+    background-size:cover; background-position:center;
+}
+#wrap main .hero_bnr .swiper-wrapper .slide1 {
+    background-image:url(../img/bnr1.jpg);
+}
+#wrap main .hero_bnr .swiper-wrapper .slide2 {
+    background-image:url(../img/bnr2.jpg);
+}
+#wrap main .hero_bnr .swiper-wrapper .slide3 {
+    background-image:url(../img/bnr3.jpg);
+}
+#wrap main .hero_bnr .swiper-wrapper .swiper-slide p {
+    position:absolute; left: 50%; top:50%; transform:translate(-50%,-50%);
+}
+
+/* ============================= 마켓배너 */
+#wrap {}
+#wrap .market_bnr {
+    min-width: 1800px; height:400px;
+}
+#wrap .market_bnr .swiper-wrapper {}
+#wrap .market_bnr .swiper-wrapper .slidea {background-image:url(../img/bnr1.jpg);}
+#wrap .market_bnr .swiper-wrapper .slideb {background-image:url(../img/bnr2.jpg);}
+#wrap .market_bnr .swiper-wrapper .swiper-slide {background-size:cover; background-position:center;}
+#wrap .market_bnr .swiper-wrapper .swiper-slide .contents {
+    /* border: 2px solid #000; */ width: 1200px; margin: 0 auto; padding:100px 0 0;
+}
+#wrap .market_bnr .swiper-wrapper .swiper-slide .contents h1 {font-size:3rem; margin:0 0 50px; font-weight:700;}
+#wrap .market_bnr .swiper-wrapper .swiper-slide .contents p {line-height:1.5;}
+#wrap .market_bnr .swiper-wrapper .swiper-slide .contents a {}

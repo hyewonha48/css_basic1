@@ -1,0 +1,61 @@
+/* 모바일 -> PC 점점크게 */
+#wrap {
+    padding:0 15Px; /* 상하좌우 */
+    margin:0 auto; /* 중앙 */
+    min-width:320px; max-width:1440px;
+    background:gainsboro;
+} 
+#wrap > * {border:1px solid #000;}
+#wrap header {
+    height:60px;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+    align-items:center;
+}
+#wrap header h1 {}
+#wrap header nav {}
+#wrap main {}
+#wrap main section {
+    line-height:400px;
+    text-align:center;
+    background:linear-gradient(50deg, yellowgreen,yellow);
+}
+#wrap main section:nth-child(1) {}
+#wrap main section:nth-child(2) {}
+#wrap footer {
+    line-height:100px; /* 요소가 한줄일때만 */
+    text-align:center;
+}
+/* #wrap > * { "연습"
+border:1px solid #000;}
+#wrap header {height:60px;}
+#wrap header h1 {float:left; }
+#wrap header nav {float:right}
+#wrap main {}
+#wrap main section {
+    height:400px;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:center; align-items:center;
+    }
+#wrap main section:nth-child(1) {}
+#wrap main section:nth-child(2) {}
+#wrap footer {
+    height:100px;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:center; align-items:center;} */
+/* ============================================================================= 반응형 웹규칙 시작 */
+@media screen and (min-width:480px) { /* 480이상일때 */
+    #wrap {padding:0 30px;}
+    #wrap main {display: flex; flex-flow:row nowrap;}
+    #wrap main section {width:50%;}
+} /* 480~819px */
+@media screen and (min-width:820px) {
+    #wrap header {
+        width:100%;
+        flex-flow:column wrap;
+        justify-content:center;
+    }
+} /* 820~1440px */

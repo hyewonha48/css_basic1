@@ -306,10 +306,10 @@
  * `flex-flow:row nowrap` : 기본값 (메인축,수평 줄바꿈안함)
  * `flex-flow:row wrap` : 메인축 수평, 가로크기에 따라 줄바꿈함
  * `flex-flow:column nowrap` : 메인축 수직, 줄바꿈안함
- * `flex-flow:column wrap` : 메인축ㄱ 수직, 세로크기에 따라 줄바꿈함
+ * `flex-flow:column wrap` : 메인축 수직, 세로크기에 따라 줄바꿈함
 **메인축이란?** 부모안 2개 이상의 형제 정렬방향
 **교차축이란?** 부모안 2개 이상의 형제 교차방향 (메인반대축)
-### 메인축 정렬속성
+### 메인축 정렬속성 | 수평:row 수직:column
 * `justify-content:`
  * `flex-start` : 메인축이 수직이면 위쪽, 수평이면 왼쪽
  * `flex-end` : 메인축이 수직이면 아래, 수평이면 오른쪽
@@ -380,3 +380,24 @@ html::-o-scrollbar-thumb {background-color: #222;border-radius: 5px;}
  * -webkit-text-fill-color: transparent;
  * background-clip: text;
  * color: transparent;
+## 반응형 웹 설정
+* 설계방향
+* 반응형 표준 디바이스 크기 (w)
+ * 320 이상일때 해당 디바이스에 맞는 모습으로 재배열함
+ * 320 ~ 모바일 최소기준 (아이폰5)
+ * 480 ~
+ * 760 ~ 태블릿 표준
+ * 960 ~
+ * 1200 ~ 데스크탑 표준
+ * 1600 ~
+* 1. 모바일 -> pc 점점크게 (min-width)
+* 2. pc -> 모바일 점점작게 (max-width)
+* @keyframes 애니메이션이름 {애니메이션규칙} -> animation
+* @media screen and (규칙) {실행명령어}
+* @media screen and (w320~) {320이상일때 재배열 명령어}
+* @media screen and (w760~) {760이상일때 재배열 명령어} (=미디어쿼리)
+* media 규칙괄호안에 세미콜론(;) 금지
+### 반응형 제작 주의사항
+* 1. @media 규칙선언전 기존CSS에서 유지하고 싶은건 쓰지않기
+* 2. @media 규칙선언 후 재배열하고 싶은 CSS은 반드시 기존 CSS에서 어느선택자에 어떤값으로 썼는지 확인하고 동일한 선택자에 동일속성으로 값만 바꿔 입력하기
+

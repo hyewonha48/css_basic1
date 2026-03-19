@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper_plugin | 스와이프 플러그인</title>
+    <!--swiper 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--swiper 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- 사용지 지정 CSS, JS 아래 순서대로 연결 (resrt먼저) -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./script/index.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>header</header>
+        <main>
+            <div class="swiper hero_bnr"> <!-- 뷰포트 -->
+                <div class="swiper-wrapper"> <!-- 슬라이드 부모 -->
+                    <div class="swiper-slide slide1"><p>슬라이드1</p></div> <!-- 개별슬라이드 -->
+                    <div class="swiper-slide slide2"><p>슬라이드2</p></div> <!-- 개별슬라이드 -->
+                    <div class="swiper-slide slide3"><p>슬라이드3</p></div> <!-- 개별슬라이드 -->
+                </div>
+            </div>
+            <hr>
+            <div class="swiper market_bnr"> <!-- 뷰포트 -->
+                <div class="swiper-wrapper"> <!-- 슬라이드 부모 -->
+                    <div class="swiper-slide slidea"> <!-- 개별슬라이드 Aa -->
+                        <div class="contents">
+                            <h1>구독료 할인권으로 컬리멤버스 시작하기</h1>
+                            <p>100원으로 매일 무료배송!<br><a href="#">지금 바로 할인권 받기 ></a></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slideb"> <!-- 개별슬라이드 Bb -->
+                        <div class="contents">
+                            <h1>구독료 할인권으로 컬리멤버스 시작하기</h1>
+                            <p>100원으로 매일 무료배송!<br><a href="#">지금 바로 할인권 받기 ></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
