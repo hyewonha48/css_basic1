@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wrapper 활용</title>
+    <!--swiper 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--swiper 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/swiper.css">
+    <script src="./script/swiper.js" defer></script>
+    <!-- defer 써야하는 이유? js파일내에서 HTML인식을 위해서 (로딩순서처리) -->
+</head>
+<body>
+    <a id="top_btn" href="javascript:void(0)" onclick="wrapSwiper.slideTo(0)">top</a>
+    <header>
+        <nav>
+        <!-- a href="#" 이동할 페이지 제작전이므로 임시링크 -->
+        <!-- a href="javascript:void(0)" -->
+        <!-- (위) a링크 기본기능인 다른페이지 이동이 아닌 자바스크립트를 통해 이동위치를 따로 설정하겠다는 명령어 표시-->
+            <a href="javascript:void(0)" onclick="wrapSwiper.slideTo(0)">intro</a>
+            <a href="javascript:void(0)" onclick="wrapSwiper.slideTo(1)">profile</a>
+            <a href="javascript:void(0)" onclick="wrapSwiper.slideTo(2)">wed_project</a>
+            <a href="javascript:void(0)" onclick="wrapSwiper.slideTo(3)">graphic_design</a>
+        </nav>
+    </header>
+    <div class="swiper" id="wrap">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide intro">
+                <h1>웹디자이너 OOO</h1>
+            </div>
+            <div class="swiper-slide profile">
+                <h1>내 학력 경력 자격 정보 등</h1>
+            </div>
+            <div class="swiper-slide project1">
+                <h1>웹 프로젝트</h1>
+                <section class="group">
+                    <div class="swiper web" > <!-- id를 별도로 줘도 됨(ex.id="web") -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide1">1</div>
+                            <div class="swiper-slide slide2">2</div>
+                            <div class="swiper-slide slide3">3</div>
+                            <div class="swiper-slide slide4">4</div>
+                            <div class="swiper-slide slide5">5</div>
+                            <div class="swiper-slide slide6">6</div>
+                        </div>
+                        <!-- 선택요소(페이지번호,이전/다음버튼,스크롤바) 기본삽입위치 -->
+                    </div>
+                    <!-- 선택요소 위치2 슬라이드와 겹치는 디자인이 아닌 바깥디자인 하고싶을때 -->
+                    <div class="swiper-pagination web_page"></div>
+                </section>
+            </div>
+            <div class="swiper-slide project2">
+                <h1>그래픽 디자인 프로젝트</h1>
+                <section class="group">
+                    <div class="swiper graphic">
+                        <div class="swiper-pagination graphic_page"></div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide1">1</div>
+                            <div class="swiper-slide slide2">2</div>
+                            <div class="swiper-slide slide3">3</div>
+                            <div class="swiper-slide slide4">4</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
