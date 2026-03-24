@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper3</title>
+    <!--swiper 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--swiper 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- 사용자 파일 연결 -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/swiper3.css">
+    <script src="./script/swiper3.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>header</header>
+        <main>
+            <div class="hero_wrap">
+                <div class="swiper ssf_hero">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1">
+                            <a href="#">
+                                <p>BEANPOLE</p>
+                                <h1>산뜻한 할인 위에<br>피어난 빈폴의 봄</h1>
+                                <p>빈폴 3DAYS 전상품<br>10% + 10% 함께 할인</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide2">
+                            <a href="#">
+                                <p>BEANPOLE</p>
+                                <h1>산뜻한 할인 위에<br>피어난 빈폴의 봄</h1>
+                                <p>빈폴 3DAYS 전상품<br>10% + 10% 함께 할인</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide3">
+                            <a href="#">
+                                <p>BEANPOLE</p>
+                                <h1>산뜻한 할인 위에<br>피어난 빈폴의 봄</h1>
+                                <p>빈폴 3DAYS 전상품<br>10% + 10% 함께 할인</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide4">
+                            <a href="#">
+                                <p>BEANPOLE</p>
+                                <h1>산뜻한 할인 위에<br>피어난 빈폴의 봄</h1>
+                                <p>빈폴 3DAYS 전상품<br>10% + 10% 함께 할인</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide5">
+                            <a href="#">
+                                <p>BEANPOLE</p>
+                                <h1>산뜻한 할인 위에<br>피어난 빈폴의 봄</h1>
+                                <p>빈폴 3DAYS 전상품<br>10% + 10% 함께 할인</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide6">
+                            <a href="#">
+                                <p>BEANPOLE</p>
+                                <h1>산뜻한 할인 위에<br>피어난 빈폴의 봄</h1>
+                                <p>빈폴 3DAYS 전상품<br>10% + 10% 함께 할인</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 페이지네이션, 이전다음, 위치 -1 (슬라이드와 겹치는 디자인) -->
+                    <div class="swiper-button-prev prev"></div>
+                    <div class="swiper-button-next next"></div>
+                </div>
+                <!-- 페이지네이션, 이전다음, 위치 -2 (슬라이드와 안겹치는 디자인) -->
+            </div>
+            <!-- <div id="brand_wrap">
+                <h1>주목할 브랜드</h1>
+                <div class="brand_group">
+                    <div class="left">
+                        <a href="#">
+                            <p>The Aperture</p>
+                            <h1>1st DROP : 무간(무간)</h1>
+                            <p>The Aperture</p>
+                            <p>기획전 바로가기</p>
+                        </a>
+                    </div>
+                    <div class="right">
+                        <div class="swiper-button-prev prev"></div>
+                        <div class="swiper-button-next next"></div>
+                        <div class="swiper brand_img">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slide1"></div>
+                                <div class="swiper-slide slide2"></div>
+                                <div class="swiper-slide slide3"></div>
+                                <div class="swiper-slide slide4"></div>
+                                <div class="swiper-slide slide5"></div>
+                                <div class="swiper-slide slide6"></div>
+                            </div>
+                            <a class="heart" href="#"><img src="./img/arrow.png" alt=""></a> 하트찜 : 잠깐 보류
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div id="brand_wrap2">
+                <h1>주목할 브랜드</h1>
+                <div class="container">
+                    <div class="left_bnr">
+                        <a href="#">
+                            <p>The Aperture</p>
+                            <h1>1st DROP : 무간(無間)</h1>
+                            <p>기획전 바로가기</p>
+                        </a>
+                    </div>
+                    <div class="right_bnr">
+                        <div class="swiper brand_slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slide1">
+                                    <div class="photo_like">
+                                        <a href="#"><img src="./img/convers_001.jpg" alt=""></a>
+                                        <a href="#" class="arroW"><img src="./img/arrow.png" alt="찜하기"></a>
+                                    </div>
+                                    <a href="#">
+                                        <p class="brand">나이키</p>
+                                        <h1>나이비 보메로 플러스</h1>
+                                        <p class="price">100,000원</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide2">
+                                    <div class="photo_like">
+                                        <a href="#"><img src="./img/convers_001.jpg" alt=""></a>
+                                        <a href="#"><img src="./img/arrow.png" alt="찜하기"></a>
+                                    </div>
+                                    <a href="#">
+                                        <p class="brand">나이키</p>
+                                        <h1>나이비 보메로 플러스</h1>
+                                        <p class="price">100,000원</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide3">
+                                    <div class="photo_like">
+                                        <a href="#"><img src="./img/convers_002.jpg" alt=""></a>
+                                        <a href="#"><img src="./img/arrow.png" alt="찜하기"></a>
+                                    </div>
+                                    <a href="#">
+                                        <p class="brand">나이키</p>
+                                        <h1>나이비 보메로 플러스</h1>
+                                        <p class="price">100,000원</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide4">
+                                    <div class="photo_like">
+                                        <a href="#"><img src="./img/convers_003.jpg" alt=""></a>
+                                        <a href="#"><img src="./img/arrow.png" alt="찜하기"></a>
+                                    </div>
+                                    <a href="#">
+                                        <p class="brand">나이키</p>
+                                        <h1>나이비 보메로 플러스</h1>
+                                        <p class="price">100,000원</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide5">
+                                    <div class="photo_like">
+                                        <a href="#"><img src="./img/convers_004.jpg" alt=""></a>
+                                        <a href="#"><img src="./img/arrow.png" alt="찜하기"></a>
+                                    </div>
+                                    <a href="#">
+                                        <p class="brand">나이키</p>
+                                        <h1>나이비 보메로 플러스</h1>
+                                        <p class="price">100,000원</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide6">
+                                    <div class="photo_like">
+                                        <a href="#"><img src="./img/convers_005.jpg" alt=""></a>
+                                        <a href="#"><img src="./img/arrow.png" alt="찜하기"></a>
+                                    </div>
+                                    <a href="#">
+                                        <p class="brand">나이키</p>
+                                        <h1>나이비 보메로 플러스</h1>
+                                        <p class="price">100,000원</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev prev"></div>
+                            <div class="swiper-button-next next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div id="brand_wrap">
+                <h1>주목할 브랜드</h1>
+                <div class="container"><!-- red -->
+                    <div class="left_bnr">
+                        <a href="#">
+                            <p>THE APERTURE</p>
+                            <h1>1st DROP:무간(無間)<br>Minimalism 90s</h1>
+                            <p>기획전 바로가기</p>
+                        </a>
+                    </div><!-- green -->
+                    <div class="right_wrap"><!-- green -->
+                        <div class="swiper brand_slide"><!-- blue -->
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slide1">
+                                    <div class="photo_like">
+                                        <a href="#"><img src="./images/nike_001.jpg" alt=""></a>
+                                        <a href="#" class="like"><img src="https://cdn-icons-png.flaticon.com/128/535/535285.png" alt="찜하기"></a>
+                                    </div>
+                                    <a href="#">
+                                        <p class="brand">나이키</p>
+                                        <h1>나이키 보메로 플러스</h1>
+                                        <p class="price">100,000원</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide2">
+                                    <div class="photo_like">
+                                        <a href="#"><img src="./images/nike_002.jpg" alt=""></a>
+                                        <a href="#" class="like"><img src="https://cdn-icons-png.flaticon.com/128/535/535285.png" alt="찜하기"></a>
+                                    </div>
+                                    <a href="#">
+                                        <p class="brand">나이키</p>
+                                        <h1>나이키 보메로 플러스</h1>
+                                        <p class="price">100,000원</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide3">
+                                    <div class="photo_like">
+                                        <a href="#"><img src="./images/nike_003.jpg" alt=""></a>
+                                        <a href="#" class="like"><img src="https://cdn-icons-png.flaticon.com/128/535/535285.png" alt="찜하기"></a>
+                                    </div>
+                                    <a href="#">
+                                        <p class="brand">나이키</p>
+                                        <h1>나이키 보메로 플러스</h1>
+                                        <p class="price">100,000원</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide4">
+                                    <div class="photo_like">
+                                        <a href="#"><img src="./images/nike_004.jpg" alt=""></a>
+                                        <a href="#" class="like"><img src="https://cdn-icons-png.flaticon.com/128/535/535285.png" alt="찜하기"></a>
+                                    </div>
+                                    <a href="#">
+                                        <p class="brand">나이키</p>
+                                        <h1>나이키 보메로 플러스</h1>
+                                        <p class="price">100,000원</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide5">
+                                    <div class="photo_like">
+                                        <a href="#"><img src="./images/nike_005.jpg" alt=""></a>
+                                        <a href="#" class="like"><img src="https://cdn-icons-png.flaticon.com/128/535/535285.png" alt="찜하기"></a>
+                                    </div>
+                                    <a href="#">
+                                        <p class="brand">나이키</p>
+                                        <h1>나이키 보메로 플러스</h1>
+                                        <p class="price">100,000원</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slide6">
+                                    <div class="photo_like">
+                                        <a href="#"><img src="./img/nike_006.jpg" alt=""></a>
+                                        <a href="#" class="like"><img src="https://cdn-icons-png.flaticon.com/128/535/535285.png" alt="찜하기"></a>
+                                    </div>
+                                    <a href="#">
+                                        <p class="brand">나이키</p>
+                                        <h1>나이키 보메로 플러스</h1>
+                                        <p class="price">100,000원</p>
+                                    </a>
+                                    <div class="swiper-button-prev prev"></div>
+                                    <div class="swiper-button-next next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
+
+<!-- div.swiper>div.swiper-wrapper>div.swiper-slide -->
