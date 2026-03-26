@@ -1,0 +1,99 @@
+/* ===================================================================== 공통common.css */
+#wrap main div h1 {font-size: 1.2rem; font-weight:700;}
+#wrap main div h1 em {font-weight: 700; text-transform: uppercase; /* 대문자 */}
+#wrap main div h1+p {font-size: 0.85rem; line-height: 1.7;}
+#wrap main div .contents .swiper .swiper-wrapper .swiper-slide h2,
+#wrap main div .contents .swiper .swiper-wrapper .swiper-slide a em {font-weight: 600;}
+#wrap main div .contents .swiper .swiper-wrapper .swiper-slide .price {line-height: 2;}
+#wrap main div .contents .swiper .swiper-wrapper .swiper-slide .price del {font-size: 0.75rem; color: #888; margin-right: 4px;}
+#wrap main div .contents .swiper .swiper-wrapper .swiper-slide .price em {font-weight: 300; font-size: 1.1rem;}
+#wrap main div .tab_contents .swiper .swiper-wrapper .swiper-slide .price {font-weight: 300; font-size: 1.1rem;} /* 탭 가격스타일 */
+#wrap main .div .contents .tab_title {display: flex; gap: 16px; margin: 30px 0 15px;}
+#wrap main .div .contents .tab_title a {font-size: 0.95rem; font-weight: 500; border-radius: 12px; border: 1px solid #ccc; padding: 10px 25px;}
+#wrap main .div .contents .tab_title a .active {background: #222; color: #fff;}
+#wrap main .div .contents .tab_contents .swiper .swiper-wrapper .swiper-slide {}
+#wrap main .div .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a {position: relative;}
+#wrap main .div .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a:nth-child(1) {}
+#wrap main .div .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a img {width: 100%;}
+#wrap main .div .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a datalist {
+    position: absolute; left: 0; bottom: 0; width: 100%; background: #222; color: #fff; 
+    background:linear-gradient(transparent, rgba(255,255,255,0.8) 10%); display: flex; flex-flow: column nowrap; 
+}
+#wrap main .div .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a img .details {}
+#wrap main .div .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a img .details em {}
+#wrap main .div .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a img .details .price {text-align: right;} /* a의 자식이 img : a .img */
+#wrap main .div .contents .tab_contents .swiper .swiper-wrapper .swiper-slide .buy {color: #000; font-size: 0.75rem; background: #fff; border-radius: 6px; padding: 6px 12px;}
+/* ===================================================================== 개별index.css */
+/*  */
+#wrap {
+    min-width: 320px;
+    display: grid; /* 부모에 grid 선언 */
+    grid-template-areas:
+        'header main'
+        'footer footer';
+}
+#wrap header {width: 150px; grid-area: header;} /* 자식에 grid정렬로 사용할 이름 붙이기 : header */
+#wrap header, #wrap footer {background-color: #222; color: #fff; text-align: center;}
+#wrap main {
+    width:calc(100% - 150px); min-width: 0; /* 최소 너비값의 제한을 두지 않도록 제한 풀기 (자식의 크기가 따라오지 않을때) */
+    padding-left:20px; grid-area: main; /* 자식에 grid정렬로 사용할 이름 : main */
+    }
+#wrap footer {line-height: 200px; grid-area: footer; } /* 자식에 grid정렬로 사용할 이름 : footer*/
+#wrap main .best_wrap {padding: 50px 0; position: relative;} /* 후보2 */
+#wrap main .best_wrap h1 {} /* 공통common 선택자수정 *//* #wrap main .best_wrap h1 {font-size: 1.2rem; font-weight:700;} */
+#wrap main .best_wrap h1+p {} /* 공통common 선택자수정 *//* #wrap main .best_wrap h1+p {font-size: 0.85rem; line-height: 1.7;} */
+#wrap main .best_wrap .contents {} /* 후보1 */
+#wrap main .best_wrap .contents .best_swiper {max-width: 1200px;}
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper {}
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .swiper-slide {}
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .swiper-slide a {}
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .swiper-slide a img {width: 100%;}
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .swiper-slide h2 {} /* 공통common 선택자수정 *//* #wrap main .best_wrap .contents .best_swiper .swiper-wrapper .swiper-slide h2 {font-weight: 600;} */
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .swiper-slide .price {} /* 공통common 선택자수정 *//* #wrap main .best_wrap .contents .best_swiper .swiper-wrapper .swiper-slide .price {line-height: 2;} */
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .swiper-slide .price del {} /* 공통common 선택자수정 *//* #wrap main .best_wrap .contents .best_swiper .swiper-wrapper .swiper-slide .price del {font-size: 0.75rem; color: #888; margin-right: 4px;} */
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .swiper-slide .price em {} /* 공통common 선택자수정 *//* #wrap main .best_wrap .contents .best_swiper .swiper-wrapper .swiper-slide .price em {font-weight: 300; font-size: 1.1rem;} */
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .slide1 {}
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .slide2 {}
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .slide3 {}
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .slide4 {}
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .slide5 {}
+#wrap main .best_wrap .contents .best_swiper .swiper-wrapper .slide6 {}
+#wrap main .best_wrap .contents .prev {left: auto; right: 90px; }
+#wrap main .best_wrap .contents .next {right: 50px; }
+#wrap main .best_wrap .contents .prev,
+#wrap main .best_wrap .contents .next {transform: scale(0.5); top: 60px;}
+#wrap main .best_wrap .contents .prev svg, #wrap main .best_wrap .contents .next svg {color: #000;}
+/* ===================================================================== 시즌상품 */
+#wrap main .season_wrap {}
+#wrap main .season_wrap h1 {}
+#wrap main .season_wrap h1 em {}
+#wrap main .season_wrap > p {}
+#wrap main .season_wrap .contents {}
+#wrap main .season_wrap .contents .tab_title {} /* 공통common 선택자수정 */
+#wrap main .season_wrap .contents .tab_title a {} /* 공통common 선택자수정 */
+#wrap main .season_wrap .contents .tab_title a .active {} /* 공통common 선택자수정 */
+#wrap main .season_wrap .contents .tab_title a .nike {}
+#wrap main .season_wrap .contents .tab_title a .converse {}
+#wrap main .season_wrap .contents .tab_contents {}
+#wrap main .season_wrap .contents .tab_contents .swiper {} /* 나이키/컨버스 공통선택자 */
+#wrap main .season_wrap .contents .tab_contents .swiper .swiper-wrapper {}
+#wrap main .season_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide {} /* 공통common 선택자수정 */
+#wrap main .season_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a {} /* 공통common 선택자수정 */
+#wrap main .season_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a:nth-child(1) {} /* 공통common 선택자수정 */
+#wrap main .season_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a img {width: 100%;} /* 공통common 선택자수정 */
+#wrap main .season_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a img span {} /* 공통common 선택자수정 */
+#wrap main .season_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a img span em {} /* 공통common 선택자수정 */
+#wrap main .season_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a img span .price {} /* 공통common 선택자수정 *//* a의 자식이 img : a .img */
+#wrap main .season_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a.buy {} /* 공통common 선택자수정 *//* a의 이름이 buy : a.buy */
+/* ===================================================================== 반응형웹 */
+@media screen and (max-width:767px){
+    /* header -> main -> footer 3행 구조로 레이아웃 변경 */
+    #wrap {
+        grid-template-areas:
+        'header'
+        'main' 
+        'footer';
+    }
+    #wrap header {width:100%; line-height: 100px;}
+    #wrap main {width:100%;}
+}

@@ -7,8 +7,8 @@ const rightWrap = new Swiper(right, {
     slidesPerView:3,
     spaceBetween:10,
     navigation:{
-        nextEl:'right_wrap .next',
         prevEl:'right_wrap .prev',
+        nextEl:'right_wrap .next',
     },
 })
 

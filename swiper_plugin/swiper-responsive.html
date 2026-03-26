@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <!--swiper 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--swiper 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/swiper-responsive.css">
+    <script src="./script/swiper-responsive.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>header</header>
+        <main>
+            <div class="best_wrap">
+                <h1>베스트상품</h1>
+                <p>주간 인기 상품입니다.</p>
+                <div class="contents">
+                    <!-- div.swiper+div.swiper-button-prev+div.swiper-button-next -->
+                    <div class="swiper best_swiper">
+                        <!-- div.swiper-wrapper>div.swiper-slide -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide1">
+                                <a href="#"><img src="./img/convers_001.jpg" alt=""></a>
+                                <h2>컨버스 상품명</h2>
+                                <p class="price"><del>100,000원</del><em>80,000원</em></p>
+                            </div>
+                            <div class="swiper-slide slide2">
+                                <a href="#"><img src="./img/convers_002.jpg" alt=""></a>
+                                <h2>컨버스 상품명</h2>
+                                <p class="price"><del>100,000원</del><em>80,000원</em></p>
+                            </div>
+                            <div class="swiper-slide slide3">
+                                <a href="#"><img src="./img/convers_003.jpg" alt=""></a>
+                                <h2>컨버스 상품명</h2>
+                                <p class="price"><del>100,000원</del><em>80,000원</em></p>
+                            </div>
+                            <div class="swiper-slide slide4">
+                                <a href="#"><img src="./img/convers_004.jpg" alt=""></a>
+                                <h2>컨버스 상품명</h2>
+                                <p class="price"><del>100,000원</del><em>80,000원</em></p>
+                            </div>
+                            <div class="swiper-slide slide5">
+                                <a href="#"><img src="./img/convers_005.jpg" alt=""></a>
+                                <h2>컨버스 상품명</h2>
+                                <p class="price"><del>100,000원</del><em>80,000원</em></p>
+                            </div>
+                            <div class="swiper-slide slide6">
+                                <a href="#"><img src="./img/convers_006.jpg" alt=""></a>
+                                <h2>컨버스 상품명</h2>
+                                <p class="price"><del>100,000원</del><em>80,000원</em></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev prev"></div>
+                    <div class="swiper-button-next next"></div>
+                </div>
+            </div>
+            <div class="season_wrap">
+                <h1><em>26s</em>시즌상품</h1>
+                <p>최신 인기 상품들을 만나보세요</p>
+                <div class="contents">
+                    <div class="tab_title">
+                        <a href="#" class="active nike">나이키</a>
+                        <a href="javascript:void(0)" class="converse">컨버스</a>
+                    </div>
+                    <div class="tab_contents">
+                        <div class="swiper nike_swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slide1">
+                                    <a href="#">
+                                        <img src="./img/nike_001.jpg" alt="">
+                                        <span class="details">
+                                            <em>나이키 시즌 상품</em>
+                                            <span class="price">120,000원</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="buy">바로구매</a>
+                                </div>
+                                <div class="swiper-slide slide2">
+                                    <a href="#">
+                                        <img src="./img/nike_002.jpg" alt="">
+                                        <span class="details">
+                                            <em>나이키 시즌 상품</em>
+                                            <span class="price">120,000원</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="buy">바로구매</a>
+                                </div>
+                                <div class="swiper-slide slide3">
+                                    <a href="#">
+                                        <img src="./img/nike_003.jpg" alt="">
+                                        <span class="details">
+                                            <em>나이키 시즌 상품</em>
+                                            <span class="price">120,000원</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="buy">바로구매</a>
+                                </div>
+                                <div class="swiper-slide slide4">
+                                    <a href="#">
+                                        <img src="./img/nike_004.jpg" alt="">
+                                        <span class="details">
+                                            <em>나이키 시즌 상품</em>
+                                            <span class="price">120,000원</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="buy">바로구매</a>
+                                </div>
+                                <div class="swiper-slide slide5">
+                                    <a href="#">
+                                        <img src="./img/nike_005.jpg" alt="">
+                                        <span class="details">
+                                            <em>나이키 시즌 상품</em>
+                                            <span class="price">120,000원</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="buy">바로구매</a>
+                                </div>
+                                <div class="swiper-slide slide6">
+                                    <a href="#">
+                                        <img src="./img/nike_006.jpg" alt="">
+                                        <span class="details">
+                                            <em>나이키 시즌 상품</em>
+                                            <span class="price">120,000원</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="buy">바로구매</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper converse_swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slide1">
+                                    <a href="#">
+                                        <img src="./img/convers_001.jpg" alt="">
+                                        <span class="details">
+                                            <em>컨버스 시즌 상품</em>
+                                            <span class="price">120,000원</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="buy">바로구매</a>
+                                </div>
+                                <div class="swiper-slide slide2">
+                                    <a href="#">
+                                        <img src="./img/convers_002.jpg" alt="">
+                                        <span class="details">
+                                            <em>컨버스 시즌 상품</em>
+                                            <span class="price">120,000원</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="buy">바로구매</a>
+                                </div>
+                                <div class="swiper-slide slide3">
+                                    <a href="#">
+                                        <img src="./img/convers_003.jpg" alt="">
+                                        <span class="details">
+                                            <em>컨버스 시즌 상품</em>
+                                            <span class="price">120,000원</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="buy">바로구매</a>
+                                </div>
+                                <div class="swiper-slide slide4">
+                                    <a href="#">
+                                        <img src="./img/convers_004.jpg" alt="">
+                                        <span class="details">
+                                            <em>컨버스 시즌 상품</em>
+                                            <span class="price">120,000원</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="buy">바로구매</a>
+                                </div>
+                                <div class="swiper-slide slide5">
+                                    <a href="#">
+                                        <img src="./img/convers_005.jpg" alt="">
+                                        <span class="details">
+                                            <em>컨버스 시즌 상품</em>
+                                            <span class="price">120,000원</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="buy">바로구매</a>
+                                </div>
+                                <div class="swiper-slide slide6">
+                                    <a href="#">
+                                        <img src="./img/convers_006.jpg" alt="">
+                                        <span class="details">
+                                            <em>컨버스 시즌 상품</em>
+                                            <span class="price">120,000원</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="buy">바로구매</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
+<!--  div.swiper>div.swiper-wrapper>div.swiper-slide -->
+<!-- div.swiper-button-prev -->
